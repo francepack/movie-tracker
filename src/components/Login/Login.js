@@ -8,6 +8,7 @@ class Login extends Component {
             password: ''
         }
     }
+
   render() {
     return (
       <div className='login-form'>
