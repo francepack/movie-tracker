@@ -22,7 +22,7 @@ class Movies extends Component {
     // console.log(recentMovies);
     const displayRecentMovies = recentMovies.map(movie => (<MovieCard {...movie} key={movie.title}/>))
     return (
-      <div>
+      <div className='movie-container'>
         {displayRecentMovies}
       </div>
     )
