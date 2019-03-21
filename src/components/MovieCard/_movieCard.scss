@@ -7,9 +7,13 @@
                          "image info info"
                          "image info info"
                          "image info info";
+
+    &:link, &:active   {
+        text-decoration: none;
+    }
 }
 
-.movie-image {
+.card-image {
     grid-area: image;
     justify-content: center;
     margin: 10px 10px 0 0;
