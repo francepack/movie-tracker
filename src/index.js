@@ -5,7 +5,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import './scss/index.scss';
-import App from './App';
+import App from './components/App/App';
 
 const store = createStore(
     rootReducer,

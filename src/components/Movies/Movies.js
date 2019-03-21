@@ -1,26 +1,20 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { getMovies } from '../../actions/actions';
+import { Link } from 'react-router-dom';
 import MovieCard from '../MovieCard/MovieCard';
-import apiKey from '../../api_key/apiKey';
 
-class Movies extends Component {
-    constructor() {
-        super();
-        this.state = {
-            recentMovies: []
-        }
-    }
-
-  componentDidMount() {
-    const url = `https://api.themoviedb.org/3/movie/now_playing?${apiKey}&language=en-US&page=1`;
-    fetch(url)
-      .then(response => response.json())
-      .then(recentMovies => this.setState({recentMovies: recentMovies.results}))
-    }
+export class Movies extends Component {
 
   render() {
-    const { recentMovies } = this.state;
-    // console.log(recentMovies);
-    const displayRecentMovies = recentMovies.map(movie => (<MovieCard {...movie} key={movie.title}/>))
+    const { movies } = this.props;
+    console.log('props in movie component', movies.results)
+    const displayRecentMovies = movies.map(movie => (
+      <Link to={`/movie/${movie.id}`} key={movie.id}>
+        <MovieCard {...movie} key={movie.title} />
+      </Link>
+    ))
+
     return (
       <div className='movie-container'>
         {displayRecentMovies}
@@ -29,6 +23,14 @@ class Movies extends Component {
   }
 }
 
+const mapStateToProps = (state) => ({
+  movies: state.movies
+});
 
+const mapDispatchToProps = (dispatch) => ({
+  getMovies: (movies) => dispatch(getMovies(movies))
+});
 
-export default Movies;
+export default connect(mapStateToProps, mapDispatchToProps)(Movies);
+
+// export default Movies;
