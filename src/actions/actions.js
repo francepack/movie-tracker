@@ -7,3 +7,8 @@ export const loggedIn = (id) => ({
   type: 'TOGGLE_LOGIN',
   id
 })
+
+export const loginUser = (userInfo) => ({
+  type: 'LOGIN_USER',
+  userInfo
+})
