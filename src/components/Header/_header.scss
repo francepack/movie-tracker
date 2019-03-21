@@ -4,11 +4,14 @@ header {
         border-bottom: 3px solid $ground;
         display: flex;
         justify-content: space-between;
-    h1{
+    h1 {
         color: $flash;
         height: 90px;
         justify-content: flex-start;
         padding-top: 28px;
         padding-left: 150px;
+    }
+    .signup {
+        cursor: pointer;
     }
 }

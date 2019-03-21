@@ -11,7 +11,7 @@ export const loggedIn = (id) => ({
 export const favorite = (id) => ({
   type: 'TOGGLE_FAVORITE',
   id
-)}
+})
 
 export const loginUser = (userInfo) => ({
   type: 'LOGIN_USER',
