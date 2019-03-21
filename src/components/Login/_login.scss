@@ -1,16 +1,25 @@
 .login-form {
-    position: absolute;
-    top: 30px;
-    right: 30px;
+    // position: absolute;
+    // top: 30px;
+    // right: 30px;
 
     form {
         display: flex;
 
         input {
+            background-color: $flash;
+            border: 0;
+            font-size: 12px;
             height: 25px;
+            margin-top: 4px;
+            text-indent: 6px;
+            &:focus {
+                outline: 0;
+    }
         }
 
         label {
+            color: $flash;
             display: flex;
             flex-direction: column;
             margin-right: 20px;
@@ -33,14 +42,14 @@
 	border:1px solid #314179;
     // display:inline-block;
     height: 30px;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:10px;
-    font-weight:bold;
-    margin-top: 18px;
-	padding:2px 12px;
-    text-decoration:none;
+	cursor: pointer;
+	color: $flash;
+	font-family: Arial;
+	font-size: 10px;
+    font-weight: bold;
+    margin: 19px 20px 0 0;
+	padding: 2px 12px;
+    text-decoration: none;
 
     &:hover {
         background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5972a7), color-stop(1, #637aad));
@@ -51,6 +60,10 @@
 	    background:linear-gradient(to bottom, #5972a7 5%, #637aad 100%);
 	    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5972a7', endColorstr='#637aad',GradientType=0);
 	    background-color:#5972a7;
+    }
+
+    &:focus {
+        outline: 0;
     }
 
     &:active {
