@@ -1,31 +1,31 @@
 .movie-card {
     @include card-design();
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 5px;
-    grid-template-areas: "image title title"
-                         "image date date"
-                         "image info info"
-                         "image info info"
-                         "image info info";
+    // grid-template-columns: repeat(3, 1fr);
+    // grid-gap: 5px;
+    // grid-template-areas: "image title title"
+    //                      "image date date"
+    //                      "image info info"
+    //                      "image info info"
+    //                      "image info info";
 
-    &:link, &:active   {
-        text-decoration: none;
-    }
+    // &:link, &:active   {
+    //     text-decoration: none;
+    // }
 }
 
-.card-image {
-    grid-area: image;
-    justify-content: center;
-    margin: 10px 10px 0 0;
-}
+// .card-image {
+//     grid-area: image;
+//     justify-content: center;
+//     margin: 10px 10px 0 0;
+// }
 
-.movie-title {
-    grid-area: title;
-}
+// .movie-title {
+//     grid-area: title;
+// }
 
-.release-date {
-    grid-area: date;
-}
+// .release-date {
+//     grid-area: date;
+// }
 
 // .movie-info {
 //     display: flex;

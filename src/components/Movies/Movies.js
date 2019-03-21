@@ -8,7 +8,7 @@ export class Movies extends Component {
 
   render() {
     const { movies } = this.props;
-    console.log('props in movie component', movies.results)
+    // console.log('props in movie component', movies.results)
     const displayRecentMovies = movies.map(movie => (
       <Link to={`/movie/${movie.id}`} key={movie.id}>
         <MovieCard {...movie} key={movie.title} />
@@ -23,14 +23,14 @@ export class Movies extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  movies: state.movies
-});
+// const mapStateToProps = (state) => ({
+//   movies: state.movies
+// });
 
-const mapDispatchToProps = (dispatch) => ({
-  getMovies: (movies) => dispatch(getMovies(movies))
-});
+// const mapDispatchToProps = (dispatch) => ({
+//   getMovies: (movies) => dispatch(getMovies(movies))
+// });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Movies);
+// export default connect(mapStateToProps, mapDispatchToProps)(Movies);
 
-// export default Movies;
+export default Movies;

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { getMovies } from '../../actions/actions';
 import apiKey from '../../api_key/apiKey';
 import Header from '../Header/Header';
-import Movies from '../Movies/Movies';
+import Movies from '../Movies/MoviesContainer';
 import MovieInfo from '../MovieInfo/MovieInfo';
 
 class App extends Component {
@@ -13,7 +13,7 @@ class App extends Component {
     try {
       const response = await fetch(url);
       const movies = await response.json();
-      console.log('movies: ',movies)
+      // console.log('movies: ', movies)
       this.props.getMovies(movies.results);
     } catch (err) {
       throw new Error(err);
@@ -22,7 +22,7 @@ class App extends Component {
 
   render() {
     const { movies } = this.props;
-    console.log('props in app', movies)
+    // console.log('props in app', movies)
     return (
       <div className="app">
         <div>
