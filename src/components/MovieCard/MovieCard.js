@@ -5,9 +5,9 @@ const MovieCard = ({ title, release_date, overview, poster_path }) => {
   return (
     <div className='movie-card'>
         <img src={imageSrc} alt={title} className='card-image'></img>
-        <h2 className='movie-title'>{title}</h2>
+        <h2>{title}</h2>
         <p className='release-date'>{release_date}</p>
-        <p className='movie-info'>{overview}</p>
+        <p>{overview}</p>
     </div>
   )
 }
