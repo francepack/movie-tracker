@@ -3,11 +3,6 @@ export const getMovies = (movies) => ({
     movies
 });
 
-export const loggedIn = (id) => ({
-  type: 'TOGGLE_LOGIN',
-  id
-})
-
 export const favorite = (id) => ({
   type: 'TOGGLE_FAVORITE',
   id

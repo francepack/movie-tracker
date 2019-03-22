@@ -8,7 +8,8 @@ class Login extends Component {
       this.state = {
           name: '',
           email: '',
-          password: ''
+          password: '',
+          error: ''
         }
     }
 
@@ -19,7 +20,7 @@ class Login extends Component {
     })
   }
 
-  settings = (method, body) => ({
+  options = (method, body) => ({
     method,
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body)
@@ -28,15 +29,12 @@ class Login extends Component {
   postFetch = async (url, method, body) => {
     const backEndUrl = 'http://localhost:3000/api/';
     try {
-      const response = await fetch(`${backEndUrl}${url}`, this.settings(method, body))
-      console.log('response: ', response)
-      const user = await response.json()
-      console.log('user data', user.data)
+      const response = await fetch(`${backEndUrl}${url}`, this.options(method, body));
+      const user = await response.json();
       return user.data;
-    } catch (err) {
-      console.log('err: ', err)
-
-      // throw new Error(err);
+    } catch (error) {
+      this.setState({ error });
+      console.log('err: ', this.state.error)
     }
   }
 
