@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Login from '../Login/Login';
 import SignUpForm from '../SignUpForm/SignUpForm';
 
@@ -7,6 +8,7 @@ class Header extends Component {
     super();
     this.state = {
       displaySignUpForm: false,
+      isLoggedIn: false
     }
   }
 
@@ -19,6 +21,7 @@ class Header extends Component {
 
   render() {
     const { displaySignUpForm } = this.state;
+    console.log('header props: ', this.props);
     return (
         <header>
           <h1>Movie Tracker</h1>
@@ -38,4 +41,10 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export const mapStateToProps = (state) => ({
+  loginUser: state.loginUser
+})
+
+export default connect(mapStateToProps, null)(Header);
+
+// export default Header;
