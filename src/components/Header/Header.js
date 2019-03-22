@@ -10,13 +10,28 @@ class Header extends Component {
     }
   }
 
+  toggleSignUpForm = () => {
+    const { displaySignUpForm } = this.state;
+    this.setState({
+      displaySignUpForm: !displaySignUpForm
+    })
+  }
+
   render() {
+    const { displaySignUpForm } = this.state;
     return (
         <header>
           <h1>Movie Tracker</h1>
           <div>
+          {
+            !displaySignUpForm &&
             <Login />
-            <div className='signup'>Need an account?</div>
+          }
+          <div className='signup' onClick={this.toggleSignUpForm}>Need an account?</div>
+          {
+            displaySignUpForm &&
+            <SignUpForm />
+          }
           </div>
         </header>
     )
