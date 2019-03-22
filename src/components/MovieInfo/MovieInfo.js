@@ -3,7 +3,7 @@ import React from 'react';
 const MovieInfo = ({ id, title, overview, poster_path, release_date, vote_average, vote_count, backdrop_path }) => {
   const imageSrc = {backgroundImage: `url(http://image.tmdb.org/t/p/w342//${poster_path})` };
   const background = { backgroundImage: `url(http://image.tmdb.org/t/p/original${backdrop_path})` };
-  
+
   return (
     <div className='movie-info'>
       <div className='movie-image' style={imageSrc}></div>
@@ -22,6 +22,7 @@ const MovieInfo = ({ id, title, overview, poster_path, release_date, vote_averag
             <p>{overview}</p>
           </div>
         </div>
+        <div>Return</div>
       </article>
     </div>
   )

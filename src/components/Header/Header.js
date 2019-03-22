@@ -28,12 +28,17 @@ class Header extends Component {
           <div>
           {
             !displaySignUpForm &&
-            <Login />
+            <div>
+              <Login />
+              <div className='signup' onClick={this.toggleSignUpForm}>Need an account?</div>
+            </div>
           }
-          <div className='signup' onClick={this.toggleSignUpForm}>Need an account?</div>
           {
             displaySignUpForm &&
-            <SignUpForm />
+            <div>
+              <SignUpForm />
+              <div className='signup' onClick={this.toggleSignUpForm}>Return to login</div>
+            </div>
           }
           </div>
         </header>

@@ -1,5 +1,10 @@
 .movie-card {
     @include card-design();
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
     // grid-template-columns: repeat(3, 1fr);
     // grid-gap: 5px;
     // grid-template-areas: "image title title"
