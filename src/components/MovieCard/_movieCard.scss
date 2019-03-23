@@ -5,35 +5,13 @@
         transform: scale(1.05);
     }
 
-    // grid-template-columns: repeat(3, 1fr);
-    // grid-gap: 5px;
-    // grid-template-areas: "image title title"
-    //                      "image date date"
-    //                      "image info info"
-    //                      "image info info"
-    //                      "image info info";
-
-    // &:link, &:active   {
-    //     text-decoration: none;
-    // }
+    .star {
+        position: absolute;
+        left: 80%;
+        top: 3.5%;
+        z-index: 1;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
 }
-
-// .card-image {
-//     grid-area: image;
-//     justify-content: center;
-//     margin: 10px 10px 0 0;
-// }
-
-// .movie-title {
-//     grid-area: title;
-// }
-
-// .release-date {
-//     grid-area: date;
-// }
-
-// .movie-info {
-//     display: flex;
-//     justify-content: flex-start;
-//     grid-area: info;
-// }

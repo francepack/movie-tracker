@@ -13,8 +13,9 @@
 }
 
 .movie-image {
+
   background-size: cover;
-  background-position: center;
+  background-position: center bottom;
   border-right: solid $ground 3px;
   height: 100%;
   width: 100%;
@@ -41,6 +42,16 @@
     font-size: 260%;
     padding: 20px;
   }
+
+  .star {
+    position: absolute;
+    left: 92%;
+    top: 1%;
+    &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+}
 }
 
 .release-date {
@@ -68,4 +79,10 @@
   p {
     font-size: 18px;
   }
+}
+
+.return {
+  font-style: italic;
+  margin-bottom: 10px;
+  text-decoration: underline;
 }
