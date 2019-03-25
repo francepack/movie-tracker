@@ -4,8 +4,10 @@ header {
         border-bottom: 3px solid $ground;
         display: flex;
         justify-content: space-between;
+        height: 130px;
     h1 {
         color: $cream;
+        font-family: 'Courgette', cursive;
         font-size: 250%;
         height: 90px;
         justify-content: flex-start;

@@ -1,10 +1,10 @@
 .movie-info {
   border: solid $ground 3px;
   border-radius: 15px;
-  color: $smoke;
+  color: $mud;
   display: grid;
   grid-template-columns: 345px auto;
-  height: 500px;
+  min-height: 500px;
   left: 5%;
   margin: 20px 0 200px 0;
   overflow: hidden;
@@ -14,6 +14,7 @@
 
 .movie-image {
   background-repeat: no-repeat;
+  background-color: $ground;
   border-right: solid $ground 3px;
   height: 100%;
   width: 100%;
@@ -24,7 +25,6 @@
   background: rgba(255,255,255,.7);
   height: 100%;
   left: 0;
-  // position: absolute;
 }
 
 .info-section {
@@ -37,6 +37,7 @@
 
 .movie-title {
   h2 {
+    font-family: 'Courgette', cursive;
     font-size: 260%;
     padding: 20px;
   }
@@ -58,25 +59,25 @@
 }
 
 .release-date {
-  font-size: 140%;
+  font-size: 150%;
   margin-bottom: 20px;
 }
 
 .review {
-   font-size: 140%;
+   font-size: 150%;
    span {
     color: red;
    }
    .vote-count {
-    font-size: 75%
+    font-size: 60%
    }
 }
 
 .movie-description {
   padding: 20px;
   h4 {
-    font-size: 160%;
-    margin-bottom: 20px;
+    font-size: 150%;
+    margin-bottom: 10px;
     text-decoration: underline;
   }
   p {
@@ -86,6 +87,9 @@
 
 .return {
   font-style: italic;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-decoration: underline;
+  &:hover {
+    transform: scale(1.1);
+  }
 }
