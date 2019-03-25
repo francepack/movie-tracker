@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { loginUser } from '../../actions/actions';
+import { postFetch } from '../../api';
 
 class Login extends Component {
     constructor() {
@@ -20,27 +21,9 @@ class Login extends Component {
     })
   }
 
-  options = (method, body) => ({
-    method,
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(body)
-  })
-
-  postFetch = async (url, method, body) => {
-    const backEndUrl = 'http://localhost:3000/api/';
-    try {
-      const response = await fetch(`${backEndUrl}${url}`, this.options(method, body));
-      const user = await response.json();
-      return user.data;
-    } catch (error) {
-      this.setState({ error });
-      console.log('err: ', this.state.error)
-    }
-  }
-
   handleLogin = async (url, body) => {
     try {
-      const response = await this.postFetch(url, 'POST', body);
+      const response = await postFetch(url, 'POST', body);
       if (response) {
         this.setState({ name: response.name })
         this.props.loginUser(response);
@@ -60,8 +43,6 @@ class Login extends Component {
     this.handleLogin(url, { email, password });
 
   }
-
-
 
   render() {
     const { email, password } = this.state;

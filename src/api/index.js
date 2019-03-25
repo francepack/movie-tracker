@@ -1,12 +1,3 @@
-
-const handleChange = (e) => {
-    const { name, value } = e.target;
-    this.setState({
-        [name]: value
-    })
-}
-
-
 const deleteFetch = async (url) => {
     const backEndUrl = 'http://localhost:3000/api/';
     const deleteOptions = {
@@ -28,7 +19,7 @@ const options = (method, body) => ({
 const postFetch = async (url, method, body) => {
     const backEndUrl = 'http://localhost:3000/api/';
     try {
-        const response = await fetch(`${backEndUrl}${url}`, this.options(method, body))
+        const response = await fetch(`${backEndUrl}${url}`, options(method, body))
         const user = await response.json()
         return user.data;
     } catch (err) {
@@ -44,4 +35,4 @@ const getFetch = async (url) => {
     return user.data;
 }
 
-export 
+export { getFetch, postFetch, deleteFetch };

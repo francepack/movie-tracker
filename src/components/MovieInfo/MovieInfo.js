@@ -2,48 +2,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { toggleFavorite } from '../../actions/actions';
 import { Link } from 'react-router-dom';
-// import { postFetch, deleteFetch } from '../../api/api';
+import { postFetch, deleteFetch } from '../../api';
 
 class MovieInfo extends Component {
 
   handleFavorite = (movieId) => {
     const { favorites } = this.props;
     if (!favorites.includes(movieId)) {
-      console.log('IF block entered add fave');
       this.addFavorite();
     } else {
-      console.log('ELSE block entered Delete fave');
       this.deleteFavorite(movieId);
-    }
-  }
-
-  deleteFetch = async (url) => {
-    const backEndUrl = 'http://localhost:3000/api/';
-    const deleteOptions = {
-      method: 'DELETE',
-      headers: { 'Content-Type': 'application/json' }
-    }
-    const response = await fetch(`${backEndUrl}${url}`, deleteOptions);
-    console.log(response);
-    const retrievedData = await response.json()
-    console.log(retrievedData);
-  }
-
-  options = (method, body) => ({
-    method,
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(body)
-  })
-
-  postFetch = async (url, method, body) => {
-    const backEndUrl = 'http://localhost:3000/api/';
-    try {
-      const response = await fetch(`${backEndUrl}${url}`, this.options(method, body))
-      const user = await response.json()
-      return user.data;
-    } catch (err) {
-      console.log('err: ', err);
-      throw new Error(err);
     }
   }
 
@@ -52,14 +20,14 @@ class MovieInfo extends Component {
     const { id, title, poster_path, release_date, vote_average, overview, loginUser, toggleFavorite } = this.props;
     console.log('movie info props: ', this.props)
     const favInfo = { movie_id: id, user_id: loginUser.id, title, poster_path, release_date, vote_average, overview };
-    await this.postFetch(url, 'POST', favInfo);
+    await postFetch(url, 'POST', favInfo);
     toggleFavorite(id);
   }
 
   deleteFavorite = async (movieId) => {
     const { id, toggleFavorite, loginUser } = this.props;
     const url = `users/${loginUser.id}/favorites/${movieId}`;
-    await this.deleteFetch(url);
+    await deleteFetch(url);
     toggleFavorite(id);
   }
 
@@ -74,8 +42,6 @@ class MovieInfo extends Component {
         {favorites.includes(id) && <i className="fas fa-star active-favorite" />}
       </div>
     );
-
-    console.log(this.props)
 
     return (
       <div className='movie-info'>

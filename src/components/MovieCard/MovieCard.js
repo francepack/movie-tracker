@@ -2,12 +2,37 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { toggleFavorite } from '../../actions/actions';
 import { Link } from 'react-router-dom';
+import { postFetch, deleteFetch } from '../../api';
 
 
 class MovieCard extends Component {
 
+  handleFavorite = (movieId) => {
+    const { favorites } = this.props;
+    if (!favorites.includes(movieId)) {
+      this.addFavorite();
+    } else {
+      this.deleteFavorite(movieId);
+    }
+  }
+
+  addFavorite = async () => {
+    const url = 'users/favorites/new';
+    const { id, title, poster_path, release_date, vote_average, overview, loginUser, toggleFavorite } = this.props;
+    const favInfo = { movie_id: id, user_id: loginUser.id, title, poster_path, release_date, vote_average, overview };
+    await postFetch(url, 'POST', favInfo);
+    toggleFavorite(id);
+  }
+
+  deleteFavorite = async (movieId) => {
+    const { id, toggleFavorite, loginUser } = this.props;
+    const url = `users/${loginUser.id}/favorites/${movieId}`;
+    await deleteFetch(url);
+    toggleFavorite(id);
+  }
+
     render() {
-      const { poster_path, id, handleFavorite, favorites } = this.props;
+      const { poster_path, id, favorites } = this.props;
       const imageSrc = 'http://image.tmdb.org/t/p/w500//' + poster_path;
       const background = { backgroundImage: `url(${imageSrc})` };
 
@@ -24,7 +49,7 @@ class MovieCard extends Component {
             <div className='linkdiv'>
             </div>
           </Link>
-          <div onClick={() => {handleFavorite(id)}}>
+          <div onClick={() => {this.handleFavorite(id)}}>
             {star}
           </div>
         </div>
@@ -33,11 +58,12 @@ class MovieCard extends Component {
 }
 
 const mapStateToProps = (state) => ({
+  loginUser: state.loginUser,
   favorites: state.favorites
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  handleFavorite: (id) => dispatch(toggleFavorite(id))
+  toggleFavorite: (id) => dispatch(toggleFavorite(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(MovieCard);
