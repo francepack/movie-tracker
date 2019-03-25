@@ -7,16 +7,21 @@
     }
 
     .star {
+        color: #929292;
         position: absolute;
+        font-size: 20px;
         left: 80%;
         top: 3.5%;
         z-index: 1;
         &:hover {
-            transform: scale(1.1);
+            transform: scale(1.3);
         }
     }
 }
-
+ 
+.active-favorite {
+    color: #f7f713;
+}
 
 .linkdiv {
     height: 380px;

@@ -7,7 +7,6 @@ export const favorite = (state = [], action) => {
         console.log('togglefav if entered')
         return state.filter(idNum => idNum !== id)
       } else {
-        console.log('reducers id', id)
         console.log('togglefav else entered')
         return [...state, id];
       }
