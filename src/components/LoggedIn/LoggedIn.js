@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { logoutUser } from '../../actions/actions';
 
 class LoggedIn extends Component {
 
   logout = () => {
+    const { logoutUser, switchDisplay } = this.props;
     if (this.props.loginUser) {
-      console.log(this.props.loginUser);
+      logoutUser();
+      switchDisplay('login');
     }
   }
 
   displayFavorites = () => {
-    
+
   }
 
     render() {
@@ -31,5 +34,9 @@ export const mapStateToProps = state => ({
     loginUser: state.loginUser
 });
 
-export default connect(mapStateToProps, null)(LoggedIn);
+const mapDispatchToProps = dispatch => ({
+  logoutUser: () => dispatch(logoutUser())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(LoggedIn);
 // export default LoggedIn;

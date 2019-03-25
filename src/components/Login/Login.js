@@ -24,12 +24,11 @@ class Login extends Component {
   handleLogin = async (url, body) => {
     try {
       const response = await postFetch(url, 'POST', body);
+      console.log(response);
       if (response) {
         this.setState({ name: response.name })
         this.props.loginUser(response);
         this.props.switchDisplay('loggedIn');
-      } else {
-        alert('Incorrect username or password');
       }
     } catch (err) {
       throw new Error(err);

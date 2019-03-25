@@ -6,7 +6,7 @@ const deleteFetch = async (url) => {
     }
     const response = await fetch(`${backEndUrl}${url}`, deleteOptions);
     console.log(response);
-    const retrievedData = await response.json()
+    const retrievedData = await response.json();
     console.log(retrievedData);
 }
 
@@ -19,9 +19,15 @@ const options = (method, body) => ({
 const postFetch = async (url, method, body) => {
     const backEndUrl = 'http://localhost:3000/api/';
     try {
-        const response = await fetch(`${backEndUrl}${url}`, options(method, body))
-        const user = await response.json()
-        return user.data;
+        const response = await fetch(`${backEndUrl}${url}`, options(method, body));
+        console.log(response.status)
+        if (response.status === 200) {
+            const user = await response.json();
+            return user.data;
+        } else if (response.status === 500) {
+            alert('incorrect username or password');
+            console.log('incorrect username or password');
+        }
     } catch (err) {
         console.log('err: ', err);
         throw new Error(err);
