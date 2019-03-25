@@ -1,5 +1,6 @@
 .movie-card {
     @include card-design();
+    padding: 0;
 
     &:hover {
         transform: scale(1.05);
@@ -20,4 +21,9 @@
  
 .active-favorite {
     color: #f7f713;
+}
+
+.linkdiv {
+    height: 380px;
+    width: 250px;
 }

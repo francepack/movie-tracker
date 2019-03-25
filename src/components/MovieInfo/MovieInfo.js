@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { toggleFavorite } from '../../actions/actions';
+import { Link } from 'react-router-dom';
 // import { postFetch, deleteFetch } from '../../api/api';
 
 class MovieInfo extends Component {
@@ -75,6 +76,7 @@ class MovieInfo extends Component {
     );
 
     console.log(this.props)
+         
     return (
       <div className='movie-info'>
         <div className='movie-image' style={imageSrc}></div>
@@ -94,6 +96,9 @@ class MovieInfo extends Component {
               <p>{overview}</p>
             </div>
             <p className='return'>Return</p>
+            <Link to='/'>
+            <p className='return'>Return to all movies</p>
+            </Link>
           </div>
         </article>
       </div>

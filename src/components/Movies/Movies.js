@@ -8,9 +8,9 @@ export class Movies extends Component {
     const { movies } = this.props;
     console.log('props in movie component', movies.results)
     const displayRecentMovies = movies.map(movie => (
-      <Link to={`/movie/${movie.id}`} key={movie.id}>
+      // <Link to={`/movie/${movie.id}`} key={movie.id}>
         <MovieCard {...movie} key={movie.title} />
-      </Link>
+      // {/* </Link> */}
     ))
 
     return (

@@ -5,13 +5,15 @@ header {
         display: flex;
         justify-content: space-between;
     h1 {
-        color: $flash;
+        color: $cream;
+        font-size: 250%;
         height: 90px;
         justify-content: flex-start;
-        padding-top: 28px;
+        padding-top: 20px;
         padding-left: 150px;
     }
     .signup {
+        color: $cream;
         cursor: pointer;
     }
 }

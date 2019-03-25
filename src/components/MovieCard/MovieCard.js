@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { toggleFavorite } from '../../actions/actions';
+import { Link } from 'react-router-dom';
+
 
 class MovieCard extends Component {
 
@@ -15,8 +17,13 @@ class MovieCard extends Component {
           {favorites.includes(id) && <i className="fas fa-star active-favorite" />}
         </div>
       );
+
       return (
         <div className='movie-card' style={background}>
+          <Link to={`/movie/${id}`} key={id}>
+            <div className='linkdiv'>
+            </div>
+          </Link>
           <div onClick={() => {handleFavorite(id)}}>
             {star}
           </div>
