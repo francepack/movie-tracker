@@ -6,6 +6,7 @@ import apiKey from '../../api_key/apiKey';
 import Header from '../Header/Header';
 import Movies from '../Movies/MoviesContainer';
 import MovieInfo from '../MovieInfo/MovieInfo';
+import FavoritesPage from '../FavoritesPage/FavoritesPage';
 
 class App extends Component {
   componentDidMount = async () => {
@@ -13,7 +14,6 @@ class App extends Component {
     try {
       const response = await fetch(url);
       const movies = await response.json();
-      // console.log('movies: ', movies)
       this.props.getMovies(movies.results);
     } catch (err) {
       throw new Error(err);
@@ -22,7 +22,6 @@ class App extends Component {
 
   render() {
     const { movies } = this.props;
-    // console.log('props in app', movies)
     return (
       <div className="app">
         <div>
@@ -35,11 +34,18 @@ class App extends Component {
         <Route exact path='/movie/:id' render={({ match }) => {
           const { id } = match.params;
           const movieInfo = movies.find(movie => movie.id === parseInt(id));
-          // console.log('movie info: ', movieInfo);
           if (movieInfo) {
             return <MovieInfo {...movieInfo} />
           }
         }} />
+        {/* <Route exact path='users/:id/favorites' render={({ match }) => {
+          const { id } = match.params;
+          const { loginUser } = this.props;
+          console.log(loginUser)
+
+        }} /> */}
+
+
       </div>
     );
   }
@@ -47,6 +53,7 @@ class App extends Component {
 
 export const mapStateToProps = (state) => ({
   movies: state.movies,
+  loginUser: state.loginUser
 })
 
 export const mapDispatchToProps = (dispatch) => ({
