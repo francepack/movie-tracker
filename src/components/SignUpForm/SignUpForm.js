@@ -37,14 +37,16 @@ class SignUpForm extends Component {
 
   render() {
     const { name, email, password } = this.state;
+    const { switchDisplay } = this.props;
     return (
       <div className='sign-up-form'>
           <form onSubmit={this.handleSignUp}>
-          <label>Name:<input type='text' name='name' value={name} onChange={this.handleChange}/></label>
-          <label>Email:<input type='email' name='email' value={email} onChange={this.handleChange}/></label>
-          <label>Password<input type='password' name='password' value={password} onChange={this.handleChange}/></label>
+            <label>Name:<input type='text' name='name' value={name} onChange={this.handleChange}/></label>
+            <label>Email:<input type='email' name='email' value={email} onChange={this.handleChange}/></label>
+            <label>Password<input type='password' name='password' value={password} onChange={this.handleChange}/></label>
             <button type='submit'>Create Account</button>
           </form>
+          <div onClick={() => {switchDisplay('login')}} className='pointer'>Return to Login</div>
       </div>
     )
   }

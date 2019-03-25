@@ -41,8 +41,13 @@ class Login extends Component {
   handleLogin = async (url, body) => {
     try {
       const response = await this.postFetch(url, 'POST', body);
-      this.setState({ name: response.name })
-      this.props.loginUser(response);
+      if (response) {
+        this.setState({ name: response.name })
+        this.props.loginUser(response);
+        this.props.switchDisplay('loggedIn');
+      } else {
+        alert('Incorrect username or password');
+      }
     } catch (err) {
       throw new Error(err);
     }
@@ -52,26 +57,35 @@ class Login extends Component {
     e.preventDefault();
     const { email, password } = this.state;
     const url = 'users';
-    this.handleLogin(url, {email, password})
+    this.handleLogin(url, { email, password });
+
   }
+
+
 
   render() {
     const { email, password } = this.state;
+    const { switchDisplay } = this.props;
     return (
       <div className='login-form'>
-          <form onSubmit={this.logIn}>
-            <label>User Name: <input type='text' name='email' value={email} onChange={this.handleChange}/></label>
-            <label>Password: <input type='password' name='password' value={password} onChange={this.handleChange} /></label>
-            <button type='submit' className='login-btn'>Login</button>
-          </form>
+        <form onSubmit={this.logIn}>
+          <label>User Name: <input type='text' name='email' value={email} onChange={this.handleChange}/></label>
+          <label>Password: <input type='password' name='password' value={password} onChange={this.handleChange} /></label>
+          <button type='submit' className='login-btn'>Login</button>
+        </form>
+        <div onClick={() => {switchDisplay('signup')}} className='pointer'>Need an Account?</div>
       </div>
     )
   }
 }
 
+export const mapStateToProps = state => ({
+  loginUser: state.loginUser
+});
+
 export const mapDispatchToProps = (dispatch) => ({
   loginUser: (userInfo) => dispatch(loginUser(userInfo))
-})
+});
 
-export default connect(null, mapDispatchToProps)(Login);
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
 // export default Login;

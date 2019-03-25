@@ -1,46 +1,40 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import Login from '../Login/Login';
 import SignUpForm from '../SignUpForm/SignUpForm';
+import LoggedIn from '../LoggedIn/LoggedIn';
 
 class Header extends Component {
   constructor() {
     super();
     this.state = {
-      displaySignUpForm: false,
+      display: 'login',
       isLoggedIn: false
     }
   }
 
-  toggleSignUpForm = () => {
-    const { displaySignUpForm } = this.state;
-    this.setState({
-      displaySignUpForm: !displaySignUpForm
-    })
+  switchDisplay = (display) => {
+    this.setState({ display });
   }
 
   render() {
-    const { displaySignUpForm } = this.state;
-    console.log('header props: ', this.props);
+    const { display } = this.state;
+    console.log('header props: ', this.props.loginUser);
+    const displayContainer = {
+      login: (<Login switchDisplay={this.switchDisplay} />),
+      signup: (<SignUpForm switchDisplay={this.switchDisplay} />),
+      loggedIn: (<LoggedIn switchDisplay={this.switchDisplay} />)
+    }
+
     return (
-        <header>
+      <header>
+        <Link to='/' className='home-direct'>
           <h1>Movie Tracker</h1>
-          <div>
-          {
-            !displaySignUpForm &&
-            <div>
-              <Login />
-              <div className='signup' onClick={this.toggleSignUpForm}>Need an account?</div>
-            </div>
-          }
-          {
-            displaySignUpForm &&
-            <div>
-              <SignUpForm />
-              <div className='signup' onClick={this.toggleSignUpForm}>Return to login</div>
-            </div>
-          }
-          </div>
+        </Link>
+        <div>
+          {displayContainer[display]}
+        </div>
         </header>
     )
   }
