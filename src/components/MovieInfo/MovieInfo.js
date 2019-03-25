@@ -95,7 +95,6 @@ class MovieInfo extends Component {
               <h4>Description</h4>
               <p>{overview}</p>
             </div>
-            <p className='return'>Return</p>
             <Link to='/'>
             <p className='return'>Return to all movies</p>
             </Link>

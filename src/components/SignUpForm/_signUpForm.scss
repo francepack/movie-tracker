@@ -3,7 +3,12 @@
         display: flex;
 
         input {
+            border: 0;
+            background-color: #a5a9d3;
             height: 25px;
+            &:focus {
+                outline: none;
+            }
         }
 
         label {
@@ -15,7 +20,7 @@
 
         button {
             @include btn-design();
-            margin: 14px 20px 0 0;
+            margin: 23px 20px 0 0;
         }
     }
 }
