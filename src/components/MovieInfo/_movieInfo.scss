@@ -3,19 +3,17 @@
   border-radius: 15px;
   color: $smoke;
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 345px auto;
   height: 500px;
   left: 5%;
-  margin: 20px 0 100px 0;
+  margin: 20px 0 200px 0;
   overflow: hidden;
   position: relative;
   width: 90%;
 }
 
 .movie-image {
-
-  background-size: cover;
-  background-position: center bottom;
+  background-repeat: no-repeat;
   border-right: solid $ground 3px;
   height: 100%;
   width: 100%;

@@ -7,16 +7,15 @@
   box-shadow: 3px 3px 3px 3px #E0E0E0;
   color: #000;
   display: grid;
-  height: 350px;
+  height: 380px;
   margin: 15px;
-  padding: 15px;
   text-align: center;
   transform: perspective(1px) translateZ(0);
   transition-duration: 0.3s;
   transition-property: transform;
   -webkit-transition-duration: 0.3s;
   -webkit-transition-property: transform;
-  width: 220px;
+  width: 250px;
 }
 
 @mixin btn-design() {

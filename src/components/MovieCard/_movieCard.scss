@@ -1,5 +1,6 @@
 .movie-card {
     @include card-design();
+    padding: 0;
 
     &:hover {
         transform: scale(1.05);
@@ -14,4 +15,10 @@
             transform: scale(1.1);
         }
     }
+}
+
+
+.linkdiv {
+    height: 380px;
+    width: 250px;
 }
