@@ -6,16 +6,16 @@ import { Link } from 'react-router-dom';
 
 class MovieInfo extends Component {
 
-    handleFavorite = (movieId) => {
-      const { favorites } = this.props;
-      if (!favorites.includes(movieId)) {
-        console.log('IF block entered add fave');
-        this.addFavorite();
-      } else {
-        console.log('ELSE block entered Delete fave');
-        this.deleteFavorite(movieId);
-      }
+  handleFavorite = (movieId) => {
+    const { favorites } = this.props;
+    if (!favorites.includes(movieId)) {
+      console.log('IF block entered add fave');
+      this.addFavorite();
+    } else {
+      console.log('ELSE block entered Delete fave');
+      this.deleteFavorite(movieId);
     }
+  }
 
   deleteFetch = async (url) => {
     const backEndUrl = 'http://localhost:3000/api/';
@@ -76,7 +76,7 @@ class MovieInfo extends Component {
     );
 
     console.log(this.props)
-         
+
     return (
       <div className='movie-info'>
         <div className='movie-image' style={imageSrc}></div>
@@ -95,8 +95,7 @@ class MovieInfo extends Component {
               <h4>Description</h4>
               <p>{overview}</p>
             </div>
-            <p className='return'>Return</p>
-            <Link to='/'>
+              <Link to='/'>
             <p className='return'>Return to all movies</p>
             </Link>
           </div>

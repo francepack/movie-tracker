@@ -1,31 +1,31 @@
 
-export const handleChange = (e) => {
+const handleChange = (e) => {
     const { name, value } = e.target;
     this.setState({
         [name]: value
     })
 }
 
-export const deleteOptions = () => ({
-    method: 'DELETE',
-    headers: { 'Content-Type': 'application/json' }
-})
 
-export const deleteFetch = async (url) => {
+const deleteFetch = async (url) => {
     const backEndUrl = 'http://localhost:3000/api/';
-    const response = await fetch(`${backEndUrl}${url}`, deleteOptions())
+    const deleteOptions = {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' }
+    }
+    const response = await fetch(`${backEndUrl}${url}`, deleteOptions);
     console.log(response);
     const retrievedData = await response.json()
     console.log(retrievedData);
 }
 
-export const options = (method, body) => ({
+const options = (method, body) => ({
     method,
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body)
 })
 
-export const postFetch = async (url, method, body) => {
+const postFetch = async (url, method, body) => {
     const backEndUrl = 'http://localhost:3000/api/';
     try {
         const response = await fetch(`${backEndUrl}${url}`, this.options(method, body))
@@ -37,9 +37,11 @@ export const postFetch = async (url, method, body) => {
     }
 }
 
-export const getFetch = async (url) => {
+const getFetch = async (url) => {
     const backEndUrl = 'http://localhost:3000/api/';
     const response = await fetch(`${backEndUrl}${url}`)
     const user = await response.json()
     return user.data;
 }
+
+export 
