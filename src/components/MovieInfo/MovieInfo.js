@@ -7,11 +7,16 @@ import { postFetch, deleteFetch } from '../../api';
 class MovieInfo extends Component {
 
   handleFavorite = (movieId) => {
-    const { favorites } = this.props;
-    if (!favorites.includes(movieId)) {
-      this.addFavorite();
+    const { favorites, loginUser } = this.props;
+    console.log('login user', loginUser);
+    if (loginUser) {
+      if (!favorites.includes(movieId)) {
+        this.addFavorite();
+      } else {
+        this.deleteFavorite(movieId);
+      }
     } else {
-      this.deleteFavorite(movieId);
+      alert('Login to favorite movies');
     }
   }
 

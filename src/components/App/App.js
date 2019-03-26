@@ -8,8 +8,13 @@ import Movies from '../Movies/MoviesContainer';
 import MovieInfo from '../MovieInfo/MovieInfo';
 
 class App extends Component {
-  componentDidMount = async () => {
+  componentDidMount = () => {
+    this.fetchRecentMovies();
+  };
+
+  fetchRecentMovies = async () => {
     const url = `https://api.themoviedb.org/3/movie/now_playing?${apiKey}&language=en-US&page=1`;
+    // const url2 = `https://api.themoviedb.org/3/movie/now_playing?${apiKey}&language=en-US&page=2`;
     try {
       const response = await fetch(url);
       const movies = await response.json();
@@ -17,7 +22,7 @@ class App extends Component {
     } catch (err) {
       throw new Error(err);
     }
-  };
+  }
 
   render() {
     const { movies } = this.props;
