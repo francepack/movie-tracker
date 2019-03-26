@@ -6,6 +6,7 @@ import apiKey from '../../api_key/apiKey';
 import Header from '../Header/Header';
 import Movies from '../Movies/MoviesContainer';
 import MovieInfo from '../MovieInfo/MovieInfo';
+import PropTypes from 'prop-types';
 
 class App extends Component {
   componentDidMount = async () => {
@@ -64,5 +65,12 @@ export const mapStateToProps = (state) => ({
 export const mapDispatchToProps = (dispatch) => ({
   getMovies: (movies) => dispatch(getMovies(movies)),
 })
+
+App.propTypes = {
+  movies: PropTypes.array.isRequired,
+  loginUser: PropTypes.object.isRequired,
+  favorites: PropTypes.array.isRequired,
+  getMovies: PropTypes.func.isRequired
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { toggleFavorite } from '../../actions/actions';
 import { Link } from 'react-router-dom';
 import { postFetch, deleteFetch } from '../../api';
+import PropTypes from 'prop-types';
 
 class MovieInfo extends Component {
 
@@ -79,5 +80,11 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   toggleFavorite: id => dispatch(toggleFavorite(id))
 });
+
+MovieInfo.propTypes = {
+  loginUser: PropTypes.object.isRequired,
+  favorites: PropTypes.array.isRequired,
+  toggleFavorite: PropTypes.func.isRequired
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(MovieInfo);
