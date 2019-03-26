@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import MovieCard from '../MovieCard/MovieCard';
 import { connect } from 'react-redux';
 import apiKey from '../../api_key/apiKey';
+import PropTypes from 'prop-types';
 
 export class Movies extends Component {
   
@@ -58,5 +59,9 @@ export class Movies extends Component {
 export const mapStateToProps = (state) => ({
   favorites: state.favorites
 })
+
+Movies.propTypes = {
+  favorites: PropTypes.array.isRequired
+}
 
 export default connect(mapStateToProps, null)(Movies);

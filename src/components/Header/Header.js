@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import Login from '../Login/Login';
 import SignUpForm from '../SignUpForm/SignUpForm';
 import LoggedIn from '../LoggedIn/LoggedIn';
+import PropTypes from 'prop-types'
+
 
 class Header extends Component {
   constructor() {
@@ -44,6 +46,8 @@ export const mapStateToProps = (state) => ({
   loginUser: state.loginUser
 })
 
-export default connect(mapStateToProps, null)(Header);
+Header.propTypes = {
+  loginUser: PropTypes.object.isRequired
+}
 
-// export default Header;
+export default connect(mapStateToProps, null)(Header);

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/actions';
+import PropTypes from 'prop-types';
+
 
 class LoggedIn extends Component {
 
@@ -70,5 +72,10 @@ const mapDispatchToProps = dispatch => ({
   logoutUser: () => dispatch(logoutUser())
 });
 
+LoggedIn.propTypes = {
+  loginUser: PropTypes.object.isRequired,
+  favorites: PropTypes.array.isRequired,
+  logoutUser: PropTypes.func.isRequired
+}
+
 export default connect(mapStateToProps, mapDispatchToProps)(LoggedIn);
-// export default LoggedIn;
