@@ -9,7 +9,11 @@ import MovieInfo from '../MovieInfo/MovieInfo';
 import PropTypes from 'prop-types';
 
 class App extends Component {
-  componentDidMount = async () => {
+  componentDidMount = () => {
+    this.fetchRecentMovies();
+  };
+
+  fetchRecentMovies = async () => {
     const url = `https://api.themoviedb.org/3/movie/now_playing?${apiKey}&language=en-US&page=1`;
     try {
       const response = await fetch(url);
@@ -18,7 +22,7 @@ class App extends Component {
     } catch (err) {
       throw new Error(err);
     }
-  };
+  }
 
   render() {
     const { movies } = this.props;
@@ -46,11 +50,6 @@ class App extends Component {
             return <MovieInfo {...movieInfo} />
           }
         }} />
-        {/* <Route exact path='/favorites' render={() => (
-          <Movies id='favorites' />
-        )} /> */}
-
-
       </div>
     );
   }

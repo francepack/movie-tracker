@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { loginUser } from '../../actions/actions';
 import { postFetch } from '../../api';
-import PropTypes from 'prop-types';
-
 
 class Login extends Component {
     constructor() {
@@ -61,7 +59,8 @@ class Login extends Component {
 }
 
 export const mapStateToProps = state => ({
-  loginUser: state.loginUser
+  loginUser: state.loginUser,
+  favorites: state.favorites
 });
 
 export const mapDispatchToProps = (dispatch) => ({
@@ -72,5 +71,4 @@ Login.propTypes = {
   loginUser: PropTypes.func.isRequired,
   //loginUser as 2 props?
 }
-
 export default connect(mapStateToProps, mapDispatchToProps)(Login);

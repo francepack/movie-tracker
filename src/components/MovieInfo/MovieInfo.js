@@ -7,13 +7,28 @@ import PropTypes from 'prop-types';
 
 class MovieInfo extends Component {
 
-  handleFavorite = (movieId) => {
-    const { favorites } = this.props;
-    if (!favorites.includes(movieId)) {
-      this.addFavorite();
+  handleFavorite = movieId => {
+    const { favorites, loginUser } = this.props;
+    if (this.isEmpty(loginUser)) {
+      console.log('NO USER LOGGED IN');
+      alert('Please create account to use this feature');
     } else {
-      this.deleteFavorite(movieId);
+      console.log('login user if block entered');
+      if (!favorites.includes(movieId)) {
+        this.addFavorite();
+      } else {
+        this.deleteFavorite(movieId);
+      }
     }
+  }
+
+
+  isEmpty(obj) {
+    for (var key in obj) {
+      if (obj.hasOwnProperty(key))
+        return false;
+    }
+    return true;
   }
 
   addFavorite = async () => {

@@ -29,7 +29,6 @@ class LoggedIn extends Component {
     const { id } = this.props.loginUser;
     const { favorites } = this.props;
     const favoritesArray = await this.getFavoriteMovies(id)
-    // console.log(favoritesArray)
     favoritesArray.map(movie => {
       return this.props.favorites.push(movie.movie_id)
     })
