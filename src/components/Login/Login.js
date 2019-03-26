@@ -4,9 +4,9 @@ import { loginUser } from '../../actions/actions';
 import { postFetch } from '../../api';
 import PropTypes from 'prop-types';
 
-class Login extends Component {
+export class Login extends Component {
     constructor() {
-        super();
+      super();
       this.state = {
           name: '',
           email: '',
@@ -73,3 +73,4 @@ Login.propTypes = {
   //loginUser as 2 props?
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Login);
+// export Login;

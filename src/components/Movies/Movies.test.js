@@ -1,9 +1,11 @@
 import React from 'react';
-import Movies from './Movies';
+import { Movies } from './Movies';
 import { shallow } from 'enzyme';
 
 describe('Movies', () => {
+  let wrapper;
   beforeEach(() => {
+    let displayRecentMovies = jest.fn();
     wrapper = shallow(
       <Movies />
     )

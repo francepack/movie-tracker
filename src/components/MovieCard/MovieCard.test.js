@@ -4,6 +4,8 @@ import { shallow } from 'enzyme';
 
 describe('MovieCard', () => {
   beforeEach(() => {
+    let wrapper;
+
     wrapper = shallow(
       <MovieCard />
     )

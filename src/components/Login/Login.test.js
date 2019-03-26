@@ -1,7 +1,8 @@
 import React from 'react';
-import Login from './Login';
+import { Login } from './Login';
 import { shallow } from 'enzyme';
 
+let wrapper;
 describe('Login', () => {
   beforeEach(() => {
     wrapper = shallow(

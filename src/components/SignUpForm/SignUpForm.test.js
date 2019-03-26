@@ -4,6 +4,7 @@ import { shallow } from 'enzyme';
 
 describe('SignUpForm', () => {
   
+  let wrapper;
   beforeEach(() => {
     wrapper = shallow(
       <SignUpForm />
