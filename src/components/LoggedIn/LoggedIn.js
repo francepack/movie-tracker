@@ -2,14 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/actions';
 import PropTypes from 'prop-types';
-
+import { Link } from 'react-router-dom';
 
 class LoggedIn extends Component {
 
   componentDidMount = () => {
-    const { favorites, loginUser } = this.props;
     this.addStoredFavorites();
-
   }
 
   getFavoriteMovies = async (id) => {
@@ -29,12 +27,13 @@ class LoggedIn extends Component {
 
   addStoredFavorites = async () => {
     const { id } = this.props.loginUser;
+    const { favorites } = this.props;
     const favoritesArray = await this.getFavoriteMovies(id)
-    console.log(favoritesArray)
+    // console.log(favoritesArray)
     favoritesArray.map(movie => {
-      this.props.favorites.push(movie.movie_id)
+      return this.props.favorites.push(movie.movie_id)
     })
-    console.log(this.props.favorites)
+    console.log(favorites);
   }
 
   logout = () => {
@@ -45,18 +44,13 @@ class LoggedIn extends Component {
     }
   }
 
-  displayFavorites = () => {
-
-  }
-
-    render() {
+  render() {
       const { name } = this.props.loginUser;
-      console.log(this.props);
     return (
       <div className="user-display">
         <div className="user-welcome">Welcome {name}!</div>
         <div className="user-options">
-          <span className='display-favorites-btn' onClick={this.displayFavorites}>Favorites</span> | <span className='logout-btn' onClick={this.logout}>Logout</span>
+          <Link to='/favorites' className='favorites-link'><span className='display-favorites-btn'>Favorites</span></Link> | <Link to='/' className='logout-link'><span className='logout-btn' onClick={this.logout}>Logout</span></Link>
         </div>
       </div>
     );

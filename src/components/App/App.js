@@ -8,7 +8,6 @@ import Movies from '../Movies/MoviesContainer';
 import MovieInfo from '../MovieInfo/MovieInfo';
 import PropTypes from 'prop-types';
 
-
 class App extends Component {
   componentDidMount = async () => {
     const url = `https://api.themoviedb.org/3/movie/now_playing?${apiKey}&language=en-US&page=1`;
@@ -29,7 +28,15 @@ class App extends Component {
           <Header />
           {
             movies.length &&
-              <Route exact path="/" component={Movies} />
+            <Route exact path="/" render={() => {
+              return <Movies id='recent' />
+              }}  />
+          }
+          {
+            movies.length &&
+            <Route exact path='/favorites' render={() => (
+              <Movies id='favorites' />
+            )} />
           }
         </div>
         <Route exact path='/movie/:id' render={({ match }) => {
@@ -39,11 +46,9 @@ class App extends Component {
             return <MovieInfo {...movieInfo} />
           }
         }} />
-        <Route exact path='/favorites' render={() => (
-          <Movies key='favorites'
-                  id='favorites'
-          />
-        )} />
+        {/* <Route exact path='/favorites' render={() => (
+          <Movies id='favorites' />
+        )} /> */}
 
 
       </div>

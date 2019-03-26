@@ -5,7 +5,6 @@ import apiKey from '../../api_key/apiKey';
 import PropTypes from 'prop-types';
 
 export class Movies extends Component {
-  
   constructor() {
     super();
     this.state= {
@@ -34,25 +33,39 @@ export class Movies extends Component {
       })
       let favoriteMovies = await Promise.all(unresolvedFavorites);
       this.setState({ favoriteMovies })
-      console.log(this.state.favoriteMovies)
+      console.log('fave movies state', this.state.favoriteMovies)
     } catch(err) {
       console.log(err)
     }
   }
 
   render() {
-    const { movies, favorites } = this.props;
-    console.log(favorites)
-    console.log('props in movie component', movies.results)
+    const { movies, favorites, id } = this.props;
+    const { favoriteMovies } = this.state;
+    console.log('favorites: ', favorites);
+    console.log('movie props', this.props.id)
+    // console.log('props in movie component', movies.results)
     const displayRecentMovies = movies.map(movie => (
         <MovieCard {...movie} key={movie.title} />
     ))
 
-    return (
-      <div className='movie-container'>
-        {displayRecentMovies}
-      </div>
-    )
+    const displayFavoriteMovies = favoriteMovies.map(movie => (
+      <MovieCard {...movie} key={movie.title} />
+    ))
+
+    if (id === 'recent') {
+      return (
+        <div className='movie-container'>
+          {displayRecentMovies}
+        </div>
+      )
+    } else if (id === 'favorites') {
+      return (
+        <div className='movie-container'>
+          {displayFavoriteMovies}
+        </div>
+      )
+    }
   }
 }
 
