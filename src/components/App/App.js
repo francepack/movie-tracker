@@ -15,7 +15,6 @@ class App extends Component {
 
   fetchRecentMovies = async () => {
     const url = `https://api.themoviedb.org/3/movie/now_playing?${apiKey}&language=en-US&page=1`;
-    // const url2 = `https://api.themoviedb.org/3/movie/now_playing?${apiKey}&language=en-US&page=2`;
     try {
       const response = await fetch(url);
       const movies = await response.json();
@@ -51,11 +50,6 @@ class App extends Component {
             return <MovieInfo {...movieInfo} />
           }
         }} />
-        {/* <Route exact path='/favorites' render={() => (
-          <Movies id='favorites' />
-        )} /> */}
-
-
       </div>
     );
   }

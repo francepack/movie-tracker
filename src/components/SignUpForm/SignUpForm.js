@@ -28,8 +28,14 @@ class SignUpForm extends Component {
     }
     try {
       const response = await fetch(newUserUrl, options);
-      const newUser = await response.json();
-      console.log(newUser);
+      if (response.status === 200) {
+        const newUser = await response.json();
+        console.log(newUser);
+        this.props.switchDisplay('login');
+        alert('account created!')
+      } else if (response.status === 500) {
+        alert('Email already exists')
+      }
     } catch (err) {
       throw new Error(err);
     }
