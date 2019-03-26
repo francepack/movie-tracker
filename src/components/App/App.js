@@ -38,12 +38,11 @@ class App extends Component {
             return <MovieInfo {...movieInfo} />
           }
         }} />
-        {/* <Route exact path='users/:id/favorites' render={({ match }) => {
-          const { id } = match.params;
-          const { loginUser } = this.props;
-          console.log(loginUser)
-
-        }} /> */}
+        <Route exact path='/favorites' render={() => (
+          <Movies key='favorites'
+                  id='favorites'
+          />
+        )} />
 
 
       </div>
@@ -53,7 +52,8 @@ class App extends Component {
 
 export const mapStateToProps = (state) => ({
   movies: state.movies,
-  loginUser: state.loginUser
+  loginUser: state.loginUser,
+  favorites: state.favorites
 })
 
 export const mapDispatchToProps = (dispatch) => ({
@@ -61,5 +61,3 @@ export const mapDispatchToProps = (dispatch) => ({
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
-
-// export default App;

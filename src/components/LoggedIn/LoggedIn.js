@@ -13,7 +13,7 @@ class LoggedIn extends Component {
   }
 
   displayFavorites = () => {
-
+    
   }
 
     render() {
