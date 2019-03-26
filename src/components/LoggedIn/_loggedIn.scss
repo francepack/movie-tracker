@@ -3,21 +3,31 @@
 }
 
 .user-welcome {
-    color: #FFF;
+    color: $cream;
+    font-size: 120%;
     font-weight: bold;
     letter-spacing: 2px;
-    margin-bottom: 20px;
-
+    margin-bottom: 12px;
 }
 
-.logout-btn {
-    cursor: pointer;
-}
-
-.display-favorites-btn {
-    cursor: pointer;
-}
-
-.favorites-link, .logout-link{
-    text-decoration: none;
+.user-options {
+    color: $cream;
+    a {
+        text-decoration: none;
+        font-size: 110%;
+        
+        &:hover {
+          color: red;
+          cursor: pointer;
+        }
+        &:visited {
+          color: $cream;
+        }
+        &:active {
+          color: $cream;
+        }
+        &:hover {
+          color: $cream;
+        }
+      }
 }

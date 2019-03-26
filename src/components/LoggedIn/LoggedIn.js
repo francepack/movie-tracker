@@ -49,7 +49,7 @@ class LoggedIn extends Component {
       <div className="user-display">
         <div className="user-welcome">Welcome {name}!</div>
         <div className="user-options">
-          <Link to='/favorites' className='favorites-link'><span className='display-favorites-btn'>Favorites</span></Link> | <Link to='/' className='logout-link'><span className='logout-btn' onClick={this.logout}>Logout</span></Link>
+          <Link to='/favorites' className='favorites-link'><span className='display-favorites-btn'>Favorites &nbsp;</span></Link> | <Link to='/' className='logout-link'><span className='logout-btn' onClick={this.logout}>&nbsp; Logout</span></Link>
         </div>
       </div>
     );

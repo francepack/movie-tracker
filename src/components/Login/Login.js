@@ -48,7 +48,7 @@ class Login extends Component {
     return (
       <div className='login-form'>
         <form onSubmit={this.logIn}>
-          <label>User Name: <input type='text' name='email' value={email} onChange={this.handleChange}/></label>
+          <label>User Email: <input type='text' name='email' value={email} onChange={this.handleChange}/></label>
           <label>Password: <input type='password' name='password' value={password} onChange={this.handleChange} /></label>
           <button type='submit' className='login-btn'>Login</button>
         </form>
@@ -67,4 +67,8 @@ export const mapDispatchToProps = (dispatch) => ({
   loginUser: (userInfo) => dispatch(loginUser(userInfo))
 });
 
+Login.propTypes = {
+  loginUser: PropTypes.func.isRequired,
+  //loginUser as 2 props?
+}
 export default connect(mapStateToProps, mapDispatchToProps)(Login);

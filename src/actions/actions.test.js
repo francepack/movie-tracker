@@ -11,6 +11,7 @@ describe('actions', () => {
     const result = actions.getMovies(movies);
     expect(result).toEqual(expected);
   });
+
   it('should return a type of TOGGLE_FAVORITE with id', () => {
     const movie = {name: 'Get Out', id: 1};
     const expected = {
@@ -20,6 +21,7 @@ describe('actions', () => {
     const result = actions.toggleFavorite(movie);
     expect(result).toEqual(expected);
   });
+
   it('should return a type of LOGIN_USER with userinfo', () => {
     const user = { name: 'Isaac' };
     const expected = {
@@ -29,6 +31,7 @@ describe('actions', () => {
     const result = actions.loginUser(user);
     expect(result).toEqual(expected);
   });
+  
   it('should return a type of LOGOUT_USER', () => {
     const expected = {
       type: 'LOGOUT_USER'

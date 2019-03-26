@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Login from '../Login/Login';
 import SignUpForm from '../SignUpForm/SignUpForm';
 import LoggedIn from '../LoggedIn/LoggedIn';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 
 class Header extends Component {

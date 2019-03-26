@@ -22,7 +22,7 @@
 }
 
 .overlay {
-  background: rgba(255,255,255,.7);
+  background: rgba(255,255,255,.8);
   height: 100%;
   left: 0;
 }
@@ -45,10 +45,13 @@
   .star {
     position: absolute;
     left: 92%;
-    top: 1%;
+    top: 2%;
     &:hover {
         transform: scale(1.1);
-        cursor: pointer;
+        cursor: pointer;     
+    }
+    .fa-star {
+      font-size: 150%;
     }
 }
 
