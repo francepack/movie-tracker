@@ -11,12 +11,12 @@ describe('App', () => {
       <App />
     )
   });
-  
+
   it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-})
+});
 
 
 
