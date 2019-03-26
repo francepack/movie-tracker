@@ -20,7 +20,6 @@ class Header extends Component {
 
   render() {
     const { display } = this.state;
-    console.log('header props: ', this.props.loginUser);
     const displayContainer = {
       login: (<Login switchDisplay={this.switchDisplay} />),
       signup: (<SignUpForm switchDisplay={this.switchDisplay} />),

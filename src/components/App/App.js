@@ -6,7 +6,6 @@ import apiKey from '../../api_key/apiKey';
 import Header from '../Header/Header';
 import Movies from '../Movies/MoviesContainer';
 import MovieInfo from '../MovieInfo/MovieInfo';
-import FavoritesPage from '../FavoritesPage/FavoritesPage';
 
 class App extends Component {
   componentDidMount = async () => {
@@ -28,7 +27,15 @@ class App extends Component {
           <Header />
           {
             movies.length &&
-              <Route exact path="/" component={Movies} />
+            <Route exact path="/" render={() => {
+              return <Movies id='recent' />
+              }}  />
+          }
+          {
+            movies.length &&
+            <Route exact path='/favorites' render={() => (
+              <Movies id='favorites' />
+            )} />
           }
         </div>
         <Route exact path='/movie/:id' render={({ match }) => {
@@ -38,11 +45,9 @@ class App extends Component {
             return <MovieInfo {...movieInfo} />
           }
         }} />
-        <Route exact path='/favorites' render={() => (
-          <Movies key='favorites'
-                  id='favorites'
-          />
-        )} />
+        {/* <Route exact path='/favorites' render={() => (
+          <Movies id='favorites' />
+        )} /> */}
 
 
       </div>

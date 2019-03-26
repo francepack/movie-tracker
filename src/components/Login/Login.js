@@ -40,7 +40,6 @@ class Login extends Component {
     const { email, password } = this.state;
     const url = 'users';
     this.handleLogin(url, { email, password });
-
   }
 
   render() {
