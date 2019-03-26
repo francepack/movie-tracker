@@ -5,9 +5,8 @@ const deleteFetch = async (url) => {
         headers: { 'Content-Type': 'application/json' }
     }
     const response = await fetch(`${backEndUrl}${url}`, deleteOptions);
-    console.log(response);
     const retrievedData = await response.json();
-    console.log(retrievedData);
+    return retrievedData.status;
 }
 
 const options = (method, body) => ({
@@ -34,11 +33,4 @@ const postFetch = async (url, method, body) => {
     }
 }
 
-const getFetch = async (url) => {
-    const backEndUrl = 'http://localhost:3000/api/';
-    const response = await fetch(`${backEndUrl}${url}`)
-    const user = await response.json()
-    return user.data;
-}
-
-export { getFetch, postFetch, deleteFetch };
+export { postFetch, deleteFetch };

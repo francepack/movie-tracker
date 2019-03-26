@@ -3,12 +3,13 @@ import Login from './Login';
 import { shallow } from 'enzyme';
 
 describe('Login', () => {
+  let wrapper;
   beforeEach(() => {
     wrapper = shallow(
       <Login />
     )
   });
-  
+
   it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
