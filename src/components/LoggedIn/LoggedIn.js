@@ -4,6 +4,37 @@ import { logoutUser } from '../../actions/actions';
 
 class LoggedIn extends Component {
 
+  componentDidMount = () => {
+    const { favorites, loginUser } = this.props;
+    this.addStoredFavorites();
+
+  }
+
+  getFavoriteMovies = async (id) => {
+    const backendUrl = `http://localhost:3000/api/users/${id}/favorites`;
+    const options = {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' }
+    }
+    try {
+      const response = await fetch(backendUrl, options);
+      const favorites = await response.json();
+      return favorites.data
+    } catch(err) {
+      console.log(err)
+    }
+  }
+
+  addStoredFavorites = async () => {
+    const { id } = this.props.loginUser;
+    const favoritesArray = await this.getFavoriteMovies(id)
+    console.log(favoritesArray)
+    favoritesArray.map(movie => {
+      this.props.favorites.push(movie.movie_id)
+    })
+    console.log(this.props.favorites)
+  }
+
   logout = () => {
     const { logoutUser, switchDisplay } = this.props;
     if (this.props.loginUser) {
@@ -13,7 +44,7 @@ class LoggedIn extends Component {
   }
 
   displayFavorites = () => {
-    
+
   }
 
     render() {
@@ -31,7 +62,8 @@ class LoggedIn extends Component {
 }
 
 export const mapStateToProps = state => ({
-    loginUser: state.loginUser
+    loginUser: state.loginUser,
+    favorites: state.favorites
 });
 
 const mapDispatchToProps = dispatch => ({
