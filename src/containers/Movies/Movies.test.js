@@ -1,14 +1,21 @@
 import React from 'react';
-import { Movies } from './Movies';
+import { MovieCard } from '../MovieCard/MovieCard'
+import { Movies, mapStateToProps } from './Movies';
 import { shallow } from 'enzyme';
+
+
 
 describe('Movies', () => {
   let wrapper;
+  let mockMovies;
   beforeEach(() => {
-    let displayRecentMovies = jest.fn();
+    mockMovies = [{title:'hey'}, {title:'what?'}]
     wrapper = shallow(
-      <Movies />
-    )
+      <Movies 
+        movies= {mockMovies}
+      />
+      )
+    const displayRecentMovies = <MovieCard />;
   });
   
   it('should match snapshot', () => {
@@ -20,14 +27,28 @@ describe('Movies', () => {
       favoriteMovies: []
     });
   });
-
-  it('should getFavorites', () => {
-
+  describe('mapStateToProps', () => {
+    it('should return an object with favorites', () => {
+      const mockState = {
+        loginUser: {name: 'Isaac'},
+        favorites: [123, 444],
+        movies: [{title: 'Hey'}, {title: 'anotherMovie'}]
+      }
+      const expected = {
+        favorites: [123, 444]
+      }
+      const result = mapStateToProps(mockState);
+      expect(result).toEqual(expected)
+    });
   });
 
-  it('should fetchMovie', () => {
+  // it('should getFavorites', () => {
 
-  });
+  // });
+
+  // it('should fetchMovie', () => {
+
+  // });
 
   //componentdidmount?
 });

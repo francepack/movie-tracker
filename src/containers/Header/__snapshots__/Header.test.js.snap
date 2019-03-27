@@ -3,7 +3,7 @@
 exports[`Header should match snapshot when display is default login 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Connect(Header) />,
+  Symbol(enzyme.__unrendered__): <Header />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "checkPropTypes": [Function],
@@ -16,59 +16,151 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "function",
+    "nodeType": "host",
     "props": Object {
-      "children": [Function],
+      "children": Array [
+        <Link
+          className="home-direct"
+          to="/"
+        >
+          <h1>
+            Movie Tracker
+          </h1>
+        </Link>,
+        <div>
+          <Connect(Login)
+            switchDisplay={[Function]}
+          />
+        </div>,
+      ],
     },
     "ref": null,
-    "rendered": [Function],
-    "type": Object {
-      "$$typeof": Symbol(react.context),
-      "_calculateChangedBits": null,
-      "_context": Object {
-        "$$typeof": Symbol(react.context),
-        "Consumer": [Circular],
-        "Provider": Object {
-          "$$typeof": Symbol(react.provider),
-          "_context": [Circular],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <h1>
+            Movie Tracker
+          </h1>,
+          "className": "home-direct",
+          "to": "/",
         },
-        "_calculateChangedBits": null,
-        "_currentRenderer": null,
-        "_currentRenderer2": null,
-        "_currentValue": null,
-        "_currentValue2": null,
-        "_threadCount": 0,
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Movie Tracker",
+          },
+          "ref": null,
+          "rendered": "Movie Tracker",
+          "type": "h1",
+        },
+        "type": [Function],
       },
-    },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Connect(Login)
+            switchDisplay={[Function]}
+          />,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "switchDisplay": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
+      },
+    ],
+    "type": "header",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "function",
+      "nodeType": "host",
       "props": Object {
-        "children": [Function],
+        "children": Array [
+          <Link
+            className="home-direct"
+            to="/"
+          >
+            <h1>
+              Movie Tracker
+            </h1>
+          </Link>,
+          <div>
+            <Connect(Login)
+              switchDisplay={[Function]}
+            />
+          </div>,
+        ],
       },
       "ref": null,
-      "rendered": [Function],
-      "type": Object {
-        "$$typeof": Symbol(react.context),
-        "_calculateChangedBits": null,
-        "_context": Object {
-          "$$typeof": Symbol(react.context),
-          "Consumer": [Circular],
-          "Provider": Object {
-            "$$typeof": Symbol(react.provider),
-            "_context": [Circular],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <h1>
+              Movie Tracker
+            </h1>,
+            "className": "home-direct",
+            "to": "/",
           },
-          "_calculateChangedBits": null,
-          "_currentRenderer": null,
-          "_currentRenderer2": null,
-          "_currentValue": null,
-          "_currentValue2": null,
-          "_threadCount": 0,
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Movie Tracker",
+            },
+            "ref": null,
+            "rendered": "Movie Tracker",
+            "type": "h1",
+          },
+          "type": [Function],
         },
-      },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Connect(Login)
+              switchDisplay={[Function]}
+            />,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "switchDisplay": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
+        },
+      ],
+      "type": "header",
     },
   ],
   Symbol(enzyme.__options__): Object {
@@ -101,7 +193,7 @@ ShallowWrapper {
 exports[`Header should match snapshot when display is loggedIn 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Connect(Header) />,
+  Symbol(enzyme.__unrendered__): <Header />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "checkPropTypes": [Function],
@@ -114,59 +206,151 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "function",
+    "nodeType": "host",
     "props": Object {
-      "children": [Function],
+      "children": Array [
+        <Link
+          className="home-direct"
+          to="/"
+        >
+          <h1>
+            Movie Tracker
+          </h1>
+        </Link>,
+        <div>
+          <Connect(LoggedIn)
+            switchDisplay={[Function]}
+          />
+        </div>,
+      ],
     },
     "ref": null,
-    "rendered": [Function],
-    "type": Object {
-      "$$typeof": Symbol(react.context),
-      "_calculateChangedBits": null,
-      "_context": Object {
-        "$$typeof": Symbol(react.context),
-        "Consumer": [Circular],
-        "Provider": Object {
-          "$$typeof": Symbol(react.provider),
-          "_context": [Circular],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <h1>
+            Movie Tracker
+          </h1>,
+          "className": "home-direct",
+          "to": "/",
         },
-        "_calculateChangedBits": null,
-        "_currentRenderer": null,
-        "_currentRenderer2": null,
-        "_currentValue": null,
-        "_currentValue2": null,
-        "_threadCount": 0,
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Movie Tracker",
+          },
+          "ref": null,
+          "rendered": "Movie Tracker",
+          "type": "h1",
+        },
+        "type": [Function],
       },
-    },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Connect(LoggedIn)
+            switchDisplay={[Function]}
+          />,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "switchDisplay": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
+      },
+    ],
+    "type": "header",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "function",
+      "nodeType": "host",
       "props": Object {
-        "children": [Function],
+        "children": Array [
+          <Link
+            className="home-direct"
+            to="/"
+          >
+            <h1>
+              Movie Tracker
+            </h1>
+          </Link>,
+          <div>
+            <Connect(LoggedIn)
+              switchDisplay={[Function]}
+            />
+          </div>,
+        ],
       },
       "ref": null,
-      "rendered": [Function],
-      "type": Object {
-        "$$typeof": Symbol(react.context),
-        "_calculateChangedBits": null,
-        "_context": Object {
-          "$$typeof": Symbol(react.context),
-          "Consumer": [Circular],
-          "Provider": Object {
-            "$$typeof": Symbol(react.provider),
-            "_context": [Circular],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <h1>
+              Movie Tracker
+            </h1>,
+            "className": "home-direct",
+            "to": "/",
           },
-          "_calculateChangedBits": null,
-          "_currentRenderer": null,
-          "_currentRenderer2": null,
-          "_currentValue": null,
-          "_currentValue2": null,
-          "_threadCount": 0,
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Movie Tracker",
+            },
+            "ref": null,
+            "rendered": "Movie Tracker",
+            "type": "h1",
+          },
+          "type": [Function],
         },
-      },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Connect(LoggedIn)
+              switchDisplay={[Function]}
+            />,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "switchDisplay": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
+        },
+      ],
+      "type": "header",
     },
   ],
   Symbol(enzyme.__options__): Object {
@@ -199,7 +383,7 @@ ShallowWrapper {
 exports[`Header should match snapshot when display is signup 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Connect(Header) />,
+  Symbol(enzyme.__unrendered__): <Header />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "checkPropTypes": [Function],
@@ -212,59 +396,151 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "function",
+    "nodeType": "host",
     "props": Object {
-      "children": [Function],
+      "children": Array [
+        <Link
+          className="home-direct"
+          to="/"
+        >
+          <h1>
+            Movie Tracker
+          </h1>
+        </Link>,
+        <div>
+          <SignUpForm
+            switchDisplay={[Function]}
+          />
+        </div>,
+      ],
     },
     "ref": null,
-    "rendered": [Function],
-    "type": Object {
-      "$$typeof": Symbol(react.context),
-      "_calculateChangedBits": null,
-      "_context": Object {
-        "$$typeof": Symbol(react.context),
-        "Consumer": [Circular],
-        "Provider": Object {
-          "$$typeof": Symbol(react.provider),
-          "_context": [Circular],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <h1>
+            Movie Tracker
+          </h1>,
+          "className": "home-direct",
+          "to": "/",
         },
-        "_calculateChangedBits": null,
-        "_currentRenderer": null,
-        "_currentRenderer2": null,
-        "_currentValue": null,
-        "_currentValue2": null,
-        "_threadCount": 0,
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Movie Tracker",
+          },
+          "ref": null,
+          "rendered": "Movie Tracker",
+          "type": "h1",
+        },
+        "type": [Function],
       },
-    },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <SignUpForm
+            switchDisplay={[Function]}
+          />,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "switchDisplay": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
+      },
+    ],
+    "type": "header",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "function",
+      "nodeType": "host",
       "props": Object {
-        "children": [Function],
+        "children": Array [
+          <Link
+            className="home-direct"
+            to="/"
+          >
+            <h1>
+              Movie Tracker
+            </h1>
+          </Link>,
+          <div>
+            <SignUpForm
+              switchDisplay={[Function]}
+            />
+          </div>,
+        ],
       },
       "ref": null,
-      "rendered": [Function],
-      "type": Object {
-        "$$typeof": Symbol(react.context),
-        "_calculateChangedBits": null,
-        "_context": Object {
-          "$$typeof": Symbol(react.context),
-          "Consumer": [Circular],
-          "Provider": Object {
-            "$$typeof": Symbol(react.provider),
-            "_context": [Circular],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <h1>
+              Movie Tracker
+            </h1>,
+            "className": "home-direct",
+            "to": "/",
           },
-          "_calculateChangedBits": null,
-          "_currentRenderer": null,
-          "_currentRenderer2": null,
-          "_currentValue": null,
-          "_currentValue2": null,
-          "_threadCount": 0,
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Movie Tracker",
+            },
+            "ref": null,
+            "rendered": "Movie Tracker",
+            "type": "h1",
+          },
+          "type": [Function],
         },
-      },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <SignUpForm
+              switchDisplay={[Function]}
+            />,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "switchDisplay": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
+        },
+      ],
+      "type": "header",
     },
   ],
   Symbol(enzyme.__options__): Object {

@@ -4,7 +4,7 @@ import { logoutUser } from '../../actions';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-class LoggedIn extends Component {
+export class LoggedIn extends Component {
 
   logout = () => {
     const { logoutUser, switchDisplay } = this.props;
@@ -32,7 +32,7 @@ export const mapStateToProps = state => ({
     favorites: state.favorites
 });
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   logoutUser: () => dispatch(logoutUser())
 });
 

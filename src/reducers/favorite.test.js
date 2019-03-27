@@ -1,5 +1,5 @@
 import { favorite } from './favorite';
-import * as actions from '../actions/actions';
+import * as actions from '../actions';
 
 describe('favorite reducer', () => {
     it('should return initial state', () => {

@@ -1,5 +1,5 @@
 import { loginUser } from './loginUser';
-import * as actions from '../actions/actions';
+import * as actions from '../actions';
 
 describe('loginUser reducer', () => {
     it('should return initial state', () => {

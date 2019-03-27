@@ -1,4 +1,4 @@
-import * as actions from './actions';
+import * as actions from './index';
 
 describe('actions', () => {
   it('should return a type of GET_MOVIES with movies', () => {

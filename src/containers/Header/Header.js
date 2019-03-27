@@ -7,7 +7,7 @@ import LoggedIn from '../LoggedIn/LoggedIn';
 import PropTypes from 'prop-types';
 
 
-class Header extends Component {
+export class Header extends Component {
   constructor() {
     super();
     this.state = {
@@ -36,7 +36,7 @@ class Header extends Component {
         <div>
           {displayContainer[display]}
         </div>
-        </header>
+      </header>
     )
   }
 }

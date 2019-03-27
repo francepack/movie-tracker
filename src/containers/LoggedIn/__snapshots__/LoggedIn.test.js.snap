@@ -3,7 +3,9 @@
 exports[`LoggedIn should match snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Connect(LoggedIn) />,
+  Symbol(enzyme.__unrendered__): <LoggedIn
+    loginUser="nodejs"
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "checkPropTypes": [Function],
@@ -16,59 +18,325 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "function",
+    "nodeType": "host",
     "props": Object {
-      "children": [Function],
+      "children": Array [
+        <div
+          className="user-welcome"
+        >
+          Welcome 
+          !
+        </div>,
+        <div
+          className="user-options"
+        >
+          <Link
+            className="favorites-link"
+            to="/favorites"
+          >
+            <span
+              className="display-favorites-btn"
+            >
+              Favorites  
+            </span>
+          </Link>
+           | 
+          <Link
+            className="logout-link"
+            to="/"
+          >
+            <span
+              className="logout-btn"
+              onClick={[Function]}
+            >
+                Logout
+            </span>
+          </Link>
+        </div>,
+      ],
+      "className": "user-display",
     },
     "ref": null,
-    "rendered": [Function],
-    "type": Object {
-      "$$typeof": Symbol(react.context),
-      "_calculateChangedBits": null,
-      "_context": Object {
-        "$$typeof": Symbol(react.context),
-        "Consumer": [Circular],
-        "Provider": Object {
-          "$$typeof": Symbol(react.provider),
-          "_context": [Circular],
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Welcome ",
+            undefined,
+            "!",
+          ],
+          "className": "user-welcome",
         },
-        "_calculateChangedBits": null,
-        "_currentRenderer": null,
-        "_currentRenderer2": null,
-        "_currentValue": null,
-        "_currentValue2": null,
-        "_threadCount": 0,
+        "ref": null,
+        "rendered": Array [
+          "Welcome ",
+          undefined,
+          "!",
+        ],
+        "type": "div",
       },
-    },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Link
+              className="favorites-link"
+              to="/favorites"
+            >
+              <span
+                className="display-favorites-btn"
+              >
+                Favorites  
+              </span>
+            </Link>,
+            " | ",
+            <Link
+              className="logout-link"
+              to="/"
+            >
+              <span
+                className="logout-btn"
+                onClick={[Function]}
+              >
+                  Logout
+              </span>
+            </Link>,
+          ],
+          "className": "user-options",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <span
+                className="display-favorites-btn"
+              >
+                Favorites  
+              </span>,
+              "className": "favorites-link",
+              "to": "/favorites",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Favorites  ",
+                "className": "display-favorites-btn",
+              },
+              "ref": null,
+              "rendered": "Favorites  ",
+              "type": "span",
+            },
+            "type": [Function],
+          },
+          " | ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <span
+                className="logout-btn"
+                onClick={[Function]}
+              >
+                  Logout
+              </span>,
+              "className": "logout-link",
+              "to": "/",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "  Logout",
+                "className": "logout-btn",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "  Logout",
+              "type": "span",
+            },
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "function",
+      "nodeType": "host",
       "props": Object {
-        "children": [Function],
+        "children": Array [
+          <div
+            className="user-welcome"
+          >
+            Welcome 
+            !
+          </div>,
+          <div
+            className="user-options"
+          >
+            <Link
+              className="favorites-link"
+              to="/favorites"
+            >
+              <span
+                className="display-favorites-btn"
+              >
+                Favorites  
+              </span>
+            </Link>
+             | 
+            <Link
+              className="logout-link"
+              to="/"
+            >
+              <span
+                className="logout-btn"
+                onClick={[Function]}
+              >
+                  Logout
+              </span>
+            </Link>
+          </div>,
+        ],
+        "className": "user-display",
       },
       "ref": null,
-      "rendered": [Function],
-      "type": Object {
-        "$$typeof": Symbol(react.context),
-        "_calculateChangedBits": null,
-        "_context": Object {
-          "$$typeof": Symbol(react.context),
-          "Consumer": [Circular],
-          "Provider": Object {
-            "$$typeof": Symbol(react.provider),
-            "_context": [Circular],
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Welcome ",
+              undefined,
+              "!",
+            ],
+            "className": "user-welcome",
           },
-          "_calculateChangedBits": null,
-          "_currentRenderer": null,
-          "_currentRenderer2": null,
-          "_currentValue": null,
-          "_currentValue2": null,
-          "_threadCount": 0,
+          "ref": null,
+          "rendered": Array [
+            "Welcome ",
+            undefined,
+            "!",
+          ],
+          "type": "div",
         },
-      },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Link
+                className="favorites-link"
+                to="/favorites"
+              >
+                <span
+                  className="display-favorites-btn"
+                >
+                  Favorites  
+                </span>
+              </Link>,
+              " | ",
+              <Link
+                className="logout-link"
+                to="/"
+              >
+                <span
+                  className="logout-btn"
+                  onClick={[Function]}
+                >
+                    Logout
+                </span>
+              </Link>,
+            ],
+            "className": "user-options",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <span
+                  className="display-favorites-btn"
+                >
+                  Favorites  
+                </span>,
+                "className": "favorites-link",
+                "to": "/favorites",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Favorites  ",
+                  "className": "display-favorites-btn",
+                },
+                "ref": null,
+                "rendered": "Favorites  ",
+                "type": "span",
+              },
+              "type": [Function],
+            },
+            " | ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <span
+                  className="logout-btn"
+                  onClick={[Function]}
+                >
+                    Logout
+                </span>,
+                "className": "logout-link",
+                "to": "/",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "  Logout",
+                  "className": "logout-btn",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "  Logout",
+                "type": "span",
+              },
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {
