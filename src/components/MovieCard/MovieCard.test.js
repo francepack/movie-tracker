@@ -3,6 +3,7 @@ import MovieCard from './MovieCard';
 import { shallow } from 'enzyme';
 
 describe('MovieCard', () => {
+  let wrapper;
   beforeEach(() => {
     let wrapper;
 
@@ -10,7 +11,7 @@ describe('MovieCard', () => {
       <MovieCard />
     )
   });
-  
+
   it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
