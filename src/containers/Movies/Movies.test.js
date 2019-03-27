@@ -42,13 +42,11 @@ describe('Movies', () => {
     });
   });
 
-  // it('should getFavorites', () => {
+  describe('should getFavorites', () => {
 
-  // });
+  });
 
-  // it('should fetchMovie', () => {
+  describe('should fetchMovie', () => {
 
-  // });
-
-  //componentdidmount?
+  });
 });

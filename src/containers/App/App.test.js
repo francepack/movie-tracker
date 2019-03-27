@@ -46,7 +46,6 @@ describe('App', () => {
     it('should call getMovies if response is ok', () => {
 
     })
-
   });
 
   describe('mapStateToProps', () => {
@@ -75,15 +74,5 @@ describe('App', () => {
       mappedProps.getMovies(mockMovies)
       expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
     });
-
   })
-
 });
-
-
-
-// it('renders without crashing', () => {
-//   const div = document.createElement('div');
-//   ReactDOM.render(<App />, div);
-//   ReactDOM.unmountComponentAtNode(div);
-// });

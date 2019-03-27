@@ -1,7 +1,6 @@
 import React from 'react';
 import SignUpForm from './SignUpForm';
 import { shallow } from 'enzyme';
-// import { switchDisplay } from '../Header/Header'
 
 describe('SignUpForm', () => {
 
@@ -40,9 +39,7 @@ describe('SignUpForm', () => {
       wrapper.instance().handleChange(mockEvent);
       expect(wrapper.state('password')).toEqual('ILoveLamp');
     });
-
   });
-
 
   describe('handleSignUp', () => {
     it('should call handleSignup when form is submitted', () => {
@@ -54,7 +51,6 @@ describe('SignUpForm', () => {
     });
     it('should call switch display when an ok response is recieved', async () => {
       const spy = spyOn(wrapper.instance(), 'props.switchDisplay');
-      // const switchDisplay = jest.fn()
       const mockEvent = { preventDefault: jest.fn() };
       wrapper.setState({ 'name': 'Isaac', 'email': 'eyesack@aol.com', 'password': 'ILoveLamp' })
       window.fetch = jest.fn().mockReturnValue({
@@ -63,7 +59,6 @@ describe('SignUpForm', () => {
           status: 200,
         })
       })
-
       await wrapper.instance().handleSignUp(mockEvent);
       expect(spy).toHaveBeenCalled();
     });
@@ -74,9 +69,8 @@ describe('SignUpForm', () => {
         json: () => Promise.resolve({
           ok: true,
           status: 500,
-        })
-      })
-
+        });
+      });
       await wrapper.instance().handleSignUp(mockEvent);
       expect(alert).toHaveBeenCalled()
     });

@@ -45,28 +45,28 @@ export class MovieCard extends Component {
     toggleFavorite(id);
   }
 
-    render() {
-      const { poster_path, id, favorites } = this.props;
-      const imageSrc = 'http://image.tmdb.org/t/p/w500//' + poster_path;
-      const background = { backgroundImage: `url(${imageSrc})` };
+  render() {
+    const { poster_path, id, favorites } = this.props;
+    const imageSrc = 'http://image.tmdb.org/t/p/w500//' + poster_path;
+    const background = { backgroundImage: `url(${imageSrc})` };
 
-      const star = (
-        <div className="star">
-          {!favorites.includes(id) && <i className="fas fa-star" />}
-          {favorites.includes(id) && <i className="fas fa-star active-favorite" />}
-        </div>
-      );
+    const star = (
+      <div className="star">
+        {!favorites.includes(id) && <i className="fas fa-star" />}
+        {favorites.includes(id) && <i className="fas fa-star active-favorite" />}
+      </div>
+    );
 
-      return (
-        <div className='movie-card' style={background}>
-          <Link to={`/movie/${id}`} key={id}>
-            <div className='linkdiv'>
-            </div>
-          </Link>
-          <div onClick={() => {this.handleFavorite(id)}}>
-            {star}
+    return (
+      <div className='movie-card' style={background}>
+        <Link to={`/movie/${id}`} key={id}>
+          <div className='linkdiv'>
           </div>
+        </Link>
+        <div onClick={() => {this.handleFavorite(id)}}>
+          {star}
         </div>
+      </div>
     )
   }
 }

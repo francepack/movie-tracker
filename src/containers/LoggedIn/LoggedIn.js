@@ -15,7 +15,7 @@ export class LoggedIn extends Component {
   }
 
   render() {
-      const { name } = this.props.loginUser;
+    const { name } = this.props.loginUser;
     return (
       <div className="user-display">
         <div className="user-welcome">Welcome {name}!</div>
@@ -28,8 +28,8 @@ export class LoggedIn extends Component {
 }
 
 export const mapStateToProps = state => ({
-    loginUser: state.loginUser,
-    favorites: state.favorites
+  loginUser: state.loginUser,
+  favorites: state.favorites
 });
 
 export const mapDispatchToProps = dispatch => ({

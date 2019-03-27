@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class SignUpForm extends Component {
   constructor() {
@@ -56,6 +57,10 @@ class SignUpForm extends Component {
       </div>
     )
   }
+}
+
+SignUpForm.propTypes = {
+  switchDisplay: PropTypes.func.isRequired
 }
 
 export default SignUpForm;

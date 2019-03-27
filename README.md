@@ -16,6 +16,9 @@ In a new terminal, install the frontend and start on a new local server (localho
 
 npm install and npm start
 
+## Technologies
+Technologies used - React-redux, React-router, Sass 
+
 ## Learning Goals
 This project was created for Turing School. This is our first try at implementing react-redux, Router, as well as incorporating a back-end to save user's accounts and favorites.
 

@@ -44,15 +44,15 @@ describe('MovieCard', () => {
       expect(mockDispatch).toHaveBeenCalledWith(action)
     });
   });
-  // it('should handleFavorite', () => {
+  describe('handleFavorite', () => {
   
-  // });
+  });
   
-  // it('should addFavorite', () => {
+  describe('addFavorite', () => {
   
-  // });
+  });
   
-  // it('should deleteFavorite', () => {
+  describe('deleteFavorite', () => {
   
-  // });
+  });
 });

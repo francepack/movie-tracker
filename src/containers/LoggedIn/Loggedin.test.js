@@ -58,5 +58,4 @@ describe('LoggedIn', () => {
       expect(mockDispatch).toHaveBeenCalledWith(action)
     });
   });
-
 });

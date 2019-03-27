@@ -39,6 +39,7 @@ describe('Header', () => {
       isLoggedIn: false
     });
   });
+  
   it('mapStateToProps should return an object witha loginUser', () => {
     const mockState = {
       loginUser: {name: 'Isaac'},
