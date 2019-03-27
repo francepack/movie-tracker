@@ -1,3 +1,44 @@
+# Movie Tracker
+Movie Track allows users to see the latest releases hitting theaters. Users can also create accounts, log in, and save their favorite movies they see.
+
+## SetUp
+Create a new directory to hold both your frontend and backend directories.
+
+Go to https://github.com/turingschool-examples/movie-tracker and clone the back-end repo into your new file, following instructions there to get it up and running.
+
+Clone down the frontend repo into the same directory: git clone https://github.com/IsaacSunoo/movie-tracker.git
+
+Start the backend locally (localhost:3000)
+
+npm start
+
+In a new terminal, install the frontend and start on a new local server (localhost:3001)
+
+npm install and npm start
+
+## Learning Goals
+This project was created for Turing School. This is our first try at implementing react-redux, Router, as well as incorporating a back-end to save user's accounts and favorites.
+
+## Contributors
+Isaac Sunoo - IsaacSunoo
+Mason France - francepack
+
+## Screenshots
+Here is what a user sees as they login:
+
+<img width="1191" alt="Screen Shot 2019-03-27 at 8 22 15 AM" src="https://user-images.githubusercontent.com/44355328/55083891-e1b47900-5069-11e9-81cd-d3e849330388.png">
+
+Here, a user is logged in and viewing movie info:
+
+<img width="1177" alt="Screen Shot 2019-03-27 at 8 22 55 AM" src="https://user-images.githubusercontent.com/44355328/55083918-ed07a480-5069-11e9-8273-f7568907498a.png">
+
+Here, we have our initial wireframe, which evolved as we worked on the project:
+
+<img width="566" alt="Screen Shot 2019-03-27 at 8 23 27 AM" src="https://user-images.githubusercontent.com/44355328/55083944-fabd2a00-5069-11e9-8c85-29768862685e.png">
+
+
+### React App
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -16,53 +57,3 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.<br>
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

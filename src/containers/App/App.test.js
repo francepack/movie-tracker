@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App'
 import { shallow } from 'enzyme';
 import { mapStateToProps, mapDispatchToProps } from '../App/App';
-import { getMovies } from '../../actions/actions';
+import { getMovies } from '../../actions/index';
 
 describe('App', () => {
   let wrapper;

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { postFetch, deleteFetch } from '../../api';
 import PropTypes from 'prop-types';
 
-class MovieInfo extends Component {
+export class MovieInfo extends Component {
 
   handleFavorite = movieId => {
     const { favorites, loginUser } = this.props;
@@ -86,12 +86,12 @@ class MovieInfo extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   loginUser: state.loginUser,
   favorites: state.favorites
 });
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   toggleFavorite: id => dispatch(toggleFavorite(id))
 });
 

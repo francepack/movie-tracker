@@ -1,8 +1,7 @@
 import React from 'react';
 import SignUpForm from './SignUpForm';
 import { shallow } from 'enzyme';
-import { switchDisplay } from '../Header/Header'
-import { mapDispatchToProps } from '../Login/Login';
+// import { switchDisplay } from '../Header/Header'
 
 describe('SignUpForm', () => {
 

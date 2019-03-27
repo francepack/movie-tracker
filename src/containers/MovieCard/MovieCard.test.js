@@ -1,14 +1,17 @@
 import React from 'react';
-import MovieCard from './MovieCard';
+import { MovieCard, mapStateToProps, mapDispatchToProps } from './MovieCard';
 import { shallow } from 'enzyme';
+import * as actions from '../../actions';
 
 describe('MovieCard', () => {
   let wrapper;
+  let mockFavorites;
   beforeEach(() => {
-    let wrapper;
-
+    mockFavorites = [123, 444]
     wrapper = shallow(
-      <MovieCard />
+      <MovieCard 
+        favorites={mockFavorites}
+      />
     )
   });
 
@@ -16,15 +19,40 @@ describe('MovieCard', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should handleFavorite', () => {
-
+  
+  describe('mapStateToProps', () => {
+    it('should return an object with loginuser and favorites', () => {
+      const mockState = {
+        loginUser: {name: 'Isaac'},
+        favorites: [123, 444],
+        movies: [{title: 'Hey'}, {title: 'anotherMovie'}]
+      }
+      const expected = {
+        loginUser: {name: 'Isaac'},
+        favorites: [123, 444]
+      }
+      const result = mapStateToProps(mockState);
+      expect(result).toEqual(expected)
+    });
   });
-
-  it('should addFavorite', () => {
-
+  describe('mapDispatchToProps', () => {
+    it('should call dispatch when using toggleFavorite', () => {
+      const mockDispatch = jest.fn();
+      const action = actions.toggleFavorite({name: 'Movie1'})
+      const mappedDispatch = mapDispatchToProps(mockDispatch)
+      mappedDispatch.toggleFavorite({name: 'Movie1'})
+      expect(mockDispatch).toHaveBeenCalledWith(action)
+    });
   });
-
-  it('should deleteFavorite', () => {
-
-  });
+  // it('should handleFavorite', () => {
+  
+  // });
+  
+  // it('should addFavorite', () => {
+  
+  // });
+  
+  // it('should deleteFavorite', () => {
+  
+  // });
 });

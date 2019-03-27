@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './Header';
+import { Header, mapStateToProps } from './Header';
 import { shallow } from 'enzyme';
 
 describe('Header', () => {
@@ -33,6 +33,22 @@ describe('Header', () => {
   });
 
   it('should be able to change state display with switchDisplay', () => {
-
+    wrapper.instance().switchDisplay('signup')
+    expect(wrapper.state()).toEqual({
+      display: 'signup',
+      isLoggedIn: false
+    });
+  });
+  it('mapStateToProps should return an object witha loginUser', () => {
+    const mockState = {
+      loginUser: {name: 'Isaac'},
+      favorites: [123, 444],
+      movies: [{title: 'Hey'}, {title: 'anotherMovie'}]
+    }
+    const expected = {
+      loginUser: {name: 'Isaac'}
+    }
+    const result = mapStateToProps(mockState);
+    expect(result).toEqual(expected)
   });
 });

@@ -1,5 +1,5 @@
 import { getMovies } from './getMovies';
-import * as actions from '../actions/actions';
+import * as actions from '../actions';
 
 describe('getMovies reducer', () => {
     it('should return initial state', () => {

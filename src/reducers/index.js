@@ -7,5 +7,4 @@ export const rootReducer = combineReducers({
     movies: getMovies,
     loginUser: loginUser,
     favorites: favorite
-    // error: error
 });

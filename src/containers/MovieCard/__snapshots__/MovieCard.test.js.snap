@@ -1,4 +1,262 @@
-
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MovieCard should match snapshot 1`] = `undefined`;
+exports[`MovieCard should match snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MovieCard
+    favorites={
+      Array [
+        123,
+        444,
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Link
+          to="/movie/undefined"
+        >
+          <div
+            className="linkdiv"
+          />
+        </Link>,
+        <div
+          onClick={[Function]}
+        >
+          <div
+            className="star"
+          >
+            <i
+              className="fas fa-star"
+            />
+          </div>
+        </div>,
+      ],
+      "className": "movie-card",
+      "style": Object {
+        "backgroundImage": "url(http://image.tmdb.org/t/p/w500//undefined)",
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <div
+            className="linkdiv"
+          />,
+          "to": "/movie/undefined",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "className": "linkdiv",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            className="star"
+          >
+            <i
+              className="fas fa-star"
+            />
+          </div>,
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <i
+                className="fas fa-star"
+              />,
+              false,
+            ],
+            "className": "star",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "fas fa-star",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "i",
+            },
+            false,
+          ],
+          "type": "div",
+        },
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Link
+            to="/movie/undefined"
+          >
+            <div
+              className="linkdiv"
+            />
+          </Link>,
+          <div
+            onClick={[Function]}
+          >
+            <div
+              className="star"
+            >
+              <i
+                className="fas fa-star"
+              />
+            </div>
+          </div>,
+        ],
+        "className": "movie-card",
+        "style": Object {
+          "backgroundImage": "url(http://image.tmdb.org/t/p/w500//undefined)",
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <div
+              className="linkdiv"
+            />,
+            "to": "/movie/undefined",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "linkdiv",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <div
+              className="star"
+            >
+              <i
+                className="fas fa-star"
+              />
+            </div>,
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <i
+                  className="fas fa-star"
+                />,
+                false,
+              ],
+              "className": "star",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "fas fa-star",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "i",
+              },
+              false,
+            ],
+            "type": "div",
+          },
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;
