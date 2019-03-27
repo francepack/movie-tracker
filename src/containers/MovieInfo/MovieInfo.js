@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { toggleFavorite } from '../../actions/actions';
+import { toggleFavorite } from '../../actions';
 import { Link } from 'react-router-dom';
 import { postFetch, deleteFetch } from '../../api';
 import PropTypes from 'prop-types';

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { getMovies } from '../../actions/actions';
+import { getMovies } from '../../actions';
 import apiKey from '../../api_key/apiKey';
 import Header from '../Header/Header';
 import Movies from '../Movies/MoviesContainer';

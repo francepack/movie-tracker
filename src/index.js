@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { rootReducer } from './reducers/reducers';
+import { rootReducer } from './reducers';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import './scss/index.scss';
-import App from './components/App/App';
+import App from './containers/App/App';
 
 const store = createStore(
     rootReducer,

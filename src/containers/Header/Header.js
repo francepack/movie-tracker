@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Login from '../Login/Login';
-import SignUpForm from '../SignUpForm/SignUpForm';
+import SignUpForm from '../../components/SignUpForm/SignUpForm';
 import LoggedIn from '../LoggedIn/LoggedIn';
 import PropTypes from 'prop-types';
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { loginUser } from '../../actions/actions';
+import { loginUser } from '../../actions';
 import { postFetch } from '../../api';
 import PropTypes from 'prop-types';
 
