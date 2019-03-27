@@ -1,10 +1,10 @@
 @import './variables';
 @import './mixins';
 @import './app';
-@import '../components/Header/header';
-@import '../components/Login/login';
-@import '../components/LoggedIn/loggedIn';
-@import '../components/Movies/movies';
-@import '../components/MovieInfo/movieInfo';
-@import '../components/MovieCard/movieCard';
+@import '../containers/Header/header';
+@import '../containers/Login/login';
+@import '../containers/LoggedIn/loggedIn';
+@import '../containers/Movies/movies';
+@import '../containers/MovieInfo/movieInfo';
+@import '../containers/MovieCard/movieCard';
 @import '../components/SignUpForm/signUpForm';
