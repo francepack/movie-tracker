@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App'
 import { shallow } from 'enzyme';
+import { mapStateToProps, mapDispatchToProps } from '../App/App';
+import { getMovies } from '../../actions/actions';
 
 describe('App', () => {
   let wrapper;
@@ -25,6 +27,7 @@ describe('App', () => {
         json: () => Promise.resolve(mockData),
       }));
     });
+
     it('should return requested data', () => {
       mockMovies = {results: [{name: 'Mason'}, {name: 'Isaac'}]};
 
@@ -33,14 +36,47 @@ describe('App', () => {
       fetch = jest.fn().mockImplementationOnce(() => Promise.resolve({
         ok: false
       }));
-      wrapper.instance().fetchRecentMovies()
+      // wrapper.instance().fetchRecentMovies()
       // .catch(error => {
       //   expect(error.message).toBe('Response not ok')
       // })
 
     });
-    it('should call getMovies if response is ok')
+
+    it('should call getMovies if response is ok', () => {
+
+    })
+
   });
+
+  describe('mapStateToProps', () => {
+    it('should return an object', () => {
+      const mockData = {
+        loginUser: {},
+        favorites: []
+      }
+
+      const expected = {
+        favorites: [],
+        loginUser: {}
+      }
+
+      const mockProps = mapStateToProps(mockData);
+      expect(mockProps).toEqual(expected);
+    })
+  })
+
+  describe("mapDispatchToProps", () => {
+    it("should call dispatch for getMovies", () => {
+      mockMovies = [{ name: 'Requis' }, { name: 'Hoit' }, { name: 'Tony' }]
+      const mockDispatch = jest.fn()
+      const actionToDispatch = getMovies(mockMovies)
+      const mappedProps = mapDispatchToProps(mockDispatch)
+      mappedProps.getMovies(mockMovies)
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
+    });
+
+  })
 
 });
 
