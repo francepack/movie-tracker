@@ -10,7 +10,7 @@ describe('Header', () => {
       <Header />
     )
   });
-  
+
   it('should match snapshot when display is default login', () => {
     expect(wrapper).toMatchSnapshot();
   });
