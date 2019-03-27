@@ -22,7 +22,6 @@ class MovieInfo extends Component {
     }
   }
 
-
   isEmpty(obj) {
     for (var key in obj) {
       if (obj.hasOwnProperty(key))

@@ -8,10 +8,11 @@ export class Login extends Component {
     constructor() {
       super();
       this.state = {
-          name: '',
-          email: '',
-          password: '',
-          error: ''
+        id: 0,
+        name: '',
+        email: '',
+        password: '',
+        error: ''
         }
     }
 
@@ -60,7 +61,7 @@ export class Login extends Component {
 }
 
 export const mapStateToProps = state => ({
-  loginUser: state.loginUser,
+  currentUser: state.loginUser,
   favorites: state.favorites
 });
 
@@ -70,7 +71,6 @@ export const mapDispatchToProps = (dispatch) => ({
 
 Login.propTypes = {
   loginUser: PropTypes.func.isRequired,
-  //loginUser as 2 props?
+  currentUser: PropTypes.object.isRequired
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Login);
-// export Login;
