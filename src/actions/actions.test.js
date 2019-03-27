@@ -1,5 +1,4 @@
 import * as actions from './actions';
-// import { isMainThread } from 'worker_threads';
 
 describe('actions', () => {
   it('should return a type of GET_MOVIES with movies', () => {
@@ -18,7 +17,7 @@ describe('actions', () => {
       type: 'TOGGLE_FAVORITE',
       id: movie.id
     }
-    const result = actions.toggleFavorite(movie);
+    const result = actions.toggleFavorite(movie.id);
     expect(result).toEqual(expected);
   });
 
@@ -28,7 +27,7 @@ describe('actions', () => {
       type: 'LOGIN_USER',
       userInfo: user.name
     };
-    const result = actions.loginUser(user);
+    const result = actions.loginUser(user.name);
     expect(result).toEqual(expected);
   });
   
@@ -36,7 +35,7 @@ describe('actions', () => {
     const expected = {
       type: 'LOGOUT_USER'
     };
-    const result = actions.logoutUser;
+    const result = actions.logoutUser();
     expect(result).toEqual(expected);
   });
 });

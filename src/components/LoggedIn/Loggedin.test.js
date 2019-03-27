@@ -3,6 +3,8 @@ import LoggedIn from './LoggedIn';
 import { shallow } from 'enzyme';
 
 describe('LoggedIn', () => {
+  let wrapper;
+
   beforeEach(() => {
     wrapper = shallow(
       <LoggedIn />

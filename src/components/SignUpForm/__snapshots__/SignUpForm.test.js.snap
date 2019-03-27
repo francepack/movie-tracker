@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Login should match snapshot 1`] = `
+exports[`SignUpForm should match snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Login />,
+  Symbol(enzyme.__unrendered__): <SignUpForm />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "checkPropTypes": [Function],
@@ -23,16 +23,25 @@ ShallowWrapper {
           onSubmit={[Function]}
         >
           <label>
-            User Email: 
+            Name:
             <input
-              name="email"
+              name="name"
               onChange={[Function]}
               type="text"
               value=""
             />
           </label>
           <label>
-            Password: 
+            Email:
+            <input
+              name="email"
+              onChange={[Function]}
+              type="email"
+              value=""
+            />
+          </label>
+          <label>
+            Password:
             <input
               name="password"
               onChange={[Function]}
@@ -41,20 +50,19 @@ ShallowWrapper {
             />
           </label>
           <button
-            className="login-btn"
             type="submit"
           >
-            Login
+            Create Account
           </button>
         </form>,
         <div
           className="pointer"
           onClick={[Function]}
         >
-          Need an Account?
+          Return to Login
         </div>,
       ],
-      "className": "login-form",
+      "className": "sign-up-form",
     },
     "ref": null,
     "rendered": Array [
@@ -65,16 +73,25 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <label>
-              User Email: 
+              Name:
               <input
-                name="email"
+                name="name"
                 onChange={[Function]}
                 type="text"
                 value=""
               />
             </label>,
             <label>
-              Password: 
+              Email:
+              <input
+                name="email"
+                onChange={[Function]}
+                type="email"
+                value=""
+              />
+            </label>,
+            <label>
+              Password:
               <input
                 name="password"
                 onChange={[Function]}
@@ -83,10 +100,9 @@ ShallowWrapper {
               />
             </label>,
             <button
-              className="login-btn"
               type="submit"
             >
-              Login
+              Create Account
             </button>,
           ],
           "onSubmit": [Function],
@@ -99,9 +115,9 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                "User Email: ",
+                "Name:",
                 <input
-                  name="email"
+                  name="name"
                   onChange={[Function]}
                   type="text"
                   value=""
@@ -110,13 +126,13 @@ ShallowWrapper {
             },
             "ref": null,
             "rendered": Array [
-              "User Email: ",
+              "Name:",
               Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "name": "email",
+                  "name": "name",
                   "onChange": [Function],
                   "type": "text",
                   "value": "",
@@ -134,7 +150,42 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                "Password: ",
+                "Email:",
+                <input
+                  name="email"
+                  onChange={[Function]}
+                  type="email"
+                  value=""
+                />,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Email:",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "name": "email",
+                  "onChange": [Function],
+                  "type": "email",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+            ],
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Password:",
                 <input
                   name="password"
                   onChange={[Function]}
@@ -145,7 +196,7 @@ ShallowWrapper {
             },
             "ref": null,
             "rendered": Array [
-              "Password: ",
+              "Password:",
               Object {
                 "instance": null,
                 "key": undefined,
@@ -168,12 +219,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Login",
-              "className": "login-btn",
+              "children": "Create Account",
               "type": "submit",
             },
             "ref": null,
-            "rendered": "Login",
+            "rendered": "Create Account",
             "type": "button",
           },
         ],
@@ -184,12 +234,12 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Need an Account?",
+          "children": "Return to Login",
           "className": "pointer",
           "onClick": [Function],
         },
         "ref": null,
-        "rendered": "Need an Account?",
+        "rendered": "Return to Login",
         "type": "div",
       },
     ],
@@ -206,16 +256,25 @@ ShallowWrapper {
             onSubmit={[Function]}
           >
             <label>
-              User Email: 
+              Name:
               <input
-                name="email"
+                name="name"
                 onChange={[Function]}
                 type="text"
                 value=""
               />
             </label>
             <label>
-              Password: 
+              Email:
+              <input
+                name="email"
+                onChange={[Function]}
+                type="email"
+                value=""
+              />
+            </label>
+            <label>
+              Password:
               <input
                 name="password"
                 onChange={[Function]}
@@ -224,20 +283,19 @@ ShallowWrapper {
               />
             </label>
             <button
-              className="login-btn"
               type="submit"
             >
-              Login
+              Create Account
             </button>
           </form>,
           <div
             className="pointer"
             onClick={[Function]}
           >
-            Need an Account?
+            Return to Login
           </div>,
         ],
-        "className": "login-form",
+        "className": "sign-up-form",
       },
       "ref": null,
       "rendered": Array [
@@ -248,16 +306,25 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <label>
-                User Email: 
+                Name:
                 <input
-                  name="email"
+                  name="name"
                   onChange={[Function]}
                   type="text"
                   value=""
                 />
               </label>,
               <label>
-                Password: 
+                Email:
+                <input
+                  name="email"
+                  onChange={[Function]}
+                  type="email"
+                  value=""
+                />
+              </label>,
+              <label>
+                Password:
                 <input
                   name="password"
                   onChange={[Function]}
@@ -266,10 +333,9 @@ ShallowWrapper {
                 />
               </label>,
               <button
-                className="login-btn"
                 type="submit"
               >
-                Login
+                Create Account
               </button>,
             ],
             "onSubmit": [Function],
@@ -282,9 +348,9 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "User Email: ",
+                  "Name:",
                   <input
-                    name="email"
+                    name="name"
                     onChange={[Function]}
                     type="text"
                     value=""
@@ -293,13 +359,13 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": Array [
-                "User Email: ",
+                "Name:",
                 Object {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "name": "email",
+                    "name": "name",
                     "onChange": [Function],
                     "type": "text",
                     "value": "",
@@ -317,7 +383,42 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "Password: ",
+                  "Email:",
+                  <input
+                    name="email"
+                    onChange={[Function]}
+                    type="email"
+                    value=""
+                  />,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Email:",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "name": "email",
+                    "onChange": [Function],
+                    "type": "email",
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+              ],
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Password:",
                   <input
                     name="password"
                     onChange={[Function]}
@@ -328,7 +429,7 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": Array [
-                "Password: ",
+                "Password:",
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -351,12 +452,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Login",
-                "className": "login-btn",
+                "children": "Create Account",
                 "type": "submit",
               },
               "ref": null,
-              "rendered": "Login",
+              "rendered": "Create Account",
               "type": "button",
             },
           ],
@@ -367,12 +467,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Need an Account?",
+            "children": "Return to Login",
             "className": "pointer",
             "onClick": [Function],
           },
           "ref": null,
-          "rendered": "Need an Account?",
+          "rendered": "Return to Login",
           "type": "div",
         },
       ],

@@ -3,6 +3,7 @@ import MovieInfo from './MovieInfo';
 import { shallow } from 'enzyme';
 
 describe('MovieInfo', () => {
+  let wrapper;
   beforeEach(() => {
     wrapper = shallow(
       <MovieInfo />
