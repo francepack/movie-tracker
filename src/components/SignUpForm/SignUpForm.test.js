@@ -1,6 +1,8 @@
 import React from 'react';
 import SignUpForm from './SignUpForm';
 import { shallow } from 'enzyme';
+import { switchDisplay } from '../Header/Header'
+import { mapDispatchToProps } from '../Login/Login';
 
 describe('SignUpForm', () => {
   
@@ -51,12 +53,33 @@ describe('SignUpForm', () => {
       wrapper.find('form').simulate('submit', mockEvent);
       expect(spy).toHaveBeenCalled();
     });
-    it('should', () => {
+    it('should call switch display when an ok response is recieved', async () => {
+      const spy = spyOn(wrapper.instance(), 'props.switchDisplay');
+      // const switchDisplay = jest.fn()
       const mockEvent = {preventDefault: jest.fn()};
-
+      wrapper.setState({'name': 'Isaac', 'email': 'eyesack@aol.com', 'password': 'ILoveLamp'})
+      window.fetch = jest.fn().mockReturnValue({
+        json: () => Promise.resolve({
+        ok: true,
+        status: 200,
+        })
+      })
+      
+      await wrapper.instance().handleSignUp(mockEvent);
+      expect(spy).toHaveBeenCalled();
     });
-    it('', () => {
+    it('should produce an alert if email is already in use', async () => {
+      const mockEvent = {preventDefault: jest.fn()};
+      wrapper.setState({'name': 'Isaac', 'email': 'eyesack@aol.com', 'password': 'ILoveLamp'})
+      window.fetch = jest.fn().mockReturnValue({
+        json: () => Promise.resolve({
+        ok: true,
+        status: 500,
+        })
+      })
 
+      await wrapper.instance().handleSignUp(mockEvent);
+      expect(alert).toHaveBeenCalled()
     });
   });
 });
