@@ -6,35 +6,6 @@ import { Link } from 'react-router-dom';
 
 class LoggedIn extends Component {
 
-  // componentDidMount = () => {
-  //   this.addStoredFavorites();
-  // }
-
-  // getFavoriteMovies = async (id) => {
-  //   const backendUrl = `http://localhost:3000/api/users/${id}/favorites`;
-  //   const options = {
-  //     method: 'GET',
-  //     headers: { 'Content-Type': 'application/json' }
-  //   }
-  //   try {
-  //     const response = await fetch(backendUrl, options);
-  //     const favorites = await response.json();
-  //     return favorites.data
-  //   } catch(err) {
-  //     console.log(err)
-  //   }
-  // }
-
-  // addStoredFavorites = async () => {
-  //   const { id } = this.props.loginUser;
-  //   const { favorites } = this.props;
-  //   const favoritesArray = await this.getFavoriteMovies(id)
-  //   favoritesArray.map(movie => {
-  //     return this.props.favorites.push(movie.movie_id)
-  //   })
-  //   console.log(favorites);
-  // }
-
   logout = () => {
     const { logoutUser, switchDisplay } = this.props;
     if (this.props.loginUser) {
